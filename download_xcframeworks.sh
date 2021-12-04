@@ -9,6 +9,21 @@ latest_release_number () {
     head -1
 }
 
+xcframework_name () {
+    echo $1 | sed -E 's/.*\/|\.xcframework|\.xcframework\.zip//g'
+}
+
+library_name () {
+    echo $1 | sed -E 's/\/|\/.*\.xcframework|\/.*\.xcframework\.zip//g'
+}
+
+rename_framework () {
+    original=$1
+    rename="$(library_name $1)/$(library_name $1)_$(xcframework_name $1).xcframework"
+    mv $original $rename
+    echo $rename
+}
+
 prepare_scratch () {
     # Create temporary directory
     scratch=$(mktemp -d -t TemporaryDirectory)
@@ -23,16 +38,12 @@ prepare_scratch () {
     trap finish EXIT
 }
 
-zip_framework () {
-    zip -0 -rmq "$(library_name $1)/$(library_name $1)-$(xcframework_name $1).xcframework.zip" "$1"
-}
-
-xcframework_name () {
-    echo $1 | sed -E 's/.*\/|\.xcframework|\.xcframework\.zip//g'
-}
-
-library_name () {
-    echo $1 | sed -E 's/\/|\/.*\.xcframework|\/.*\.xcframework\.zip//g'
+zip_frameworks () {
+    for i in */*.xcframework; do
+        path=`rename_framework $i`
+        name=`xcframework_name $path`
+        cd "$path/../"; zip -rmq "$name.xcframework.zip" "$name.xcframework"; cd ..
+    done;
 }
 
 output_target () {
@@ -169,9 +180,7 @@ if [ $latest != $current ]; then
     unzip -q Firebase.zip
     echo "Preparing xcframeworks for release..."
     cd Firebase
-    for i in */*.xcframework; do
-        zip_framework $i
-    done;
+    zip_frameworks
     echo "Creating Package.swift..."
     output_swift_package $directory
     echo "Creating distribution files..."
@@ -180,8 +189,8 @@ if [ $latest != $current ]; then
     cd $directory
     commit_changes "release/$latest"
     merge_changes
-#    echo "Creating release"
-#    echo "Release $latest" | gh release create $latest ./dist/*.xcframework.zip
+    echo "Creating release"
+    echo "Release $latest" | gh release create $latest ./dist/*.xcframework.zip
 else
     echo "Up to date."
 fi
