@@ -143,7 +143,7 @@ commit_changes() {
 
 merge_changes () {
 #    gh pr create --fill
-    gh pr merge -md
+    gh pr merge -rd
 }
 
 # Current directory
@@ -178,7 +178,7 @@ if [ $latest != $current ]; then
 #    prepare_files_for_distribution "$directory/dist"
 #    echo "Merging changes to Github..."
 #    cd $directory
-    commit_changes "release/$latest"
+#    commit_changes "release/$latest"
     merge_changes
 #    echo "Creating release"
 #    echo "Release $latest" | gh release create $latest ./dist/*.xcframework.zip
