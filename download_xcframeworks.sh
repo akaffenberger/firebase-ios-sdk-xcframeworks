@@ -142,7 +142,7 @@ commit_changes() {
 }
 
 merge_changes () {
-#    gh pr create --fill
+    gh pr create --fill
     gh pr merge -rd
 }
 
@@ -161,24 +161,24 @@ echo "Upstream: $latest"
 echo "Current: $current"
 
 if [ $latest != $current ]; then
-#    echo "Version is out of date. Updating..."
-#    prepare_scratch
-#    echo "Downloading latest release..."
-#    gh release download --pattern 'Firebase.zip' --repo $firebase_repo
-#    echo "Unzipping.."
-#    unzip -q Firebase.zip
-#    echo "Preparing xcframeworks for release..."
-#    cd Firebase
-#    for i in */*.xcframework; do
-#        zip_framework $i
-#    done;
-#    echo "Creating Package.swift..."
-#    output_swift_package $directory
-#    echo "Creating distribution files..."
-#    prepare_files_for_distribution "$directory/dist"
-#    echo "Merging changes to Github..."
-#    cd $directory
-#    commit_changes "release/$latest"
+    echo "Version is out of date. Updating..."
+    prepare_scratch
+    echo "Downloading latest release..."
+    gh release download --pattern 'Firebase.zip' --repo $firebase_repo
+    echo "Unzipping.."
+    unzip -q Firebase.zip
+    echo "Preparing xcframeworks for release..."
+    cd Firebase
+    for i in */*.xcframework; do
+        zip_framework $i
+    done;
+    echo "Creating Package.swift..."
+    output_swift_package $directory
+    echo "Creating distribution files..."
+    prepare_files_for_distribution "$directory/dist"
+    echo "Merging changes to Github..."
+    cd $directory
+    commit_changes "release/$latest"
     merge_changes
 #    echo "Creating release"
 #    echo "Release $latest" | gh release create $latest ./dist/*.xcframework.zip
