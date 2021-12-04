@@ -121,20 +121,6 @@ let package = Package(
 " >> $package
 }
 
-merge_changes () {
-    branch=$1
-
-    # Create and push a new branch
-    git checkout -b $branch
-    git add .
-    git commit -m"Updated Package.swift for latest firebase sdks"
-    git push -u origin $branch
-
-    # Create and merge a PR for the new branch
-    gh pr create --fill --head
-    gh pr merge -d
-}
-
 prepare_files_for_distribution () {
     dist=$1
 
@@ -145,6 +131,19 @@ prepare_files_for_distribution () {
     for i in */*.xcframework.zip; do
         mv $i $dist
     done;
+}
+
+commit_changes() {
+    branch=$1
+    git checkout -b $branch
+    git add .
+    git commit -m"Updated Package.swift for latest firebase sdks"
+    git push -u origin $branch
+}
+
+merge_changes () {
+    gh pr create --fill
+    gh pr merge -d
 }
 
 # Current directory
@@ -162,26 +161,27 @@ echo "Upstream: $latest"
 echo "Current: $current"
 
 if [ $latest != $current ]; then
-    echo "Version is out of date. Updating..."
-    prepare_scratch
-    echo "Downloading latest release..."
-    gh release download --pattern 'Firebase.zip' --repo $firebase_repo
-    echo "Unzipping.."
-    unzip -q Firebase.zip
-    echo "Preparing xcframeworks for release..."
-    cd Firebase
-    for i in */*.xcframework; do
-        zip_framework $i
-    done;
-    echo "Creating Package.swift..."
-    output_swift_package $directory
-    echo "Creating distribution files..."
-    prepare_files_for_distribution "$directory/dist"
-    echo "Merging changes to Github..."
-    cd $directory
-    merge_changes "release/$latest"
-    echo "Creating release"
-    gh release create $latest ./dist/*.xcframework.zip -t "Release $latest"
+#    echo "Version is out of date. Updating..."
+#    prepare_scratch
+#    echo "Downloading latest release..."
+#    gh release download --pattern 'Firebase.zip' --repo $firebase_repo
+#    echo "Unzipping.."
+#    unzip -q Firebase.zip
+#    echo "Preparing xcframeworks for release..."
+#    cd Firebase
+#    for i in */*.xcframework; do
+#        zip_framework $i
+#    done;
+#    echo "Creating Package.swift..."
+#    output_swift_package $directory
+#    echo "Creating distribution files..."
+#    prepare_files_for_distribution "$directory/dist"
+#    echo "Merging changes to Github..."
+#    cd $directory
+#    commit_changes "release/$latest"
+    merge_changes
+#    echo "Creating release"
+#    echo "Release $latest" | gh release create $latest ./dist/*.xcframework.zip
 else
     echo "Up to date."
 fi
