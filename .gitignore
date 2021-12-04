@@ -1,0 +1,6 @@
+# ignore distribution files
+dist/
+# ignore swift package manager files
+.swiftpm/
+# ignore artifacts
+.DS_Store

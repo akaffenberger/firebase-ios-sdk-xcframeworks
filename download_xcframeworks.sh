@@ -84,10 +84,8 @@ output_library () {
 
 output_swift_package () {
     package="$1/Package.swift"
-    backup="$1/Package.swift.backup"
 
     # Create Package.swift
-    cp -f $package $backup
     rm -f $package
     touch $package
     printf "
@@ -123,6 +121,33 @@ let package = Package(
 " >> $package
 }
 
+merge_changes () {
+    branch=$1
+    repo=$2
+
+    # Create and push a new branch
+    git checkout -b $branch
+    git add .
+    git commit -m"Updated Package.swift for latest firebase sdks"
+    git push -u origin $branch
+
+    # Create and merge a PR for the new branch
+    gh pr create --fill --head --repo $repo
+    gh pr merge -d
+}
+
+prepare_files_for_distribution () {
+    dist=$1
+
+    # Create the distribution folder
+    mkdir $dist
+
+    # Move all xcframeworks to the distribution folder
+    for i in */*.xcframework.zip; do
+        mv $i $dist
+    done;
+}
+
 # Current directory
 directory="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
@@ -149,7 +174,15 @@ if [ $latest != $current ]; then
     for i in */*.xcframework; do
         zip_framework $i
     done;
+    echo "Creating Package.swift..."
     output_swift_package $directory
+    echo "Creating distribution files..."
+    prepare_files_for_distribution "$directory/dist"
+    echo "Merging changes to Github..."
+    cd $directory
+    merge_changes "release/$latest" $xcframeworks_repo
+    echo "Creating release"
+    gh release create $latest ./dist/*.xcframework.zip
 else
     echo "Up to date."
 fi
