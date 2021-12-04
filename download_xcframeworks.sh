@@ -142,8 +142,8 @@ commit_changes() {
 }
 
 merge_changes () {
-    gh pr create --fill
-    gh pr merge -rd
+#    gh pr create --fill
+    gh pr merge -md
 }
 
 # Current directory
