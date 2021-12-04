@@ -17,13 +17,6 @@ library_name () {
     echo $1 | sed -E 's/\/|\/.*\.xcframework|\/.*\.xcframework\.zip//g'
 }
 
-rename_framework () {
-    original=$1
-    rename="$(library_name $1)/$(library_name $1)_$(xcframework_name $1).xcframework"
-    mv $original $rename
-    echo $rename
-}
-
 prepare_scratch () {
     # Create temporary directory
     scratch=$(mktemp -d -t TemporaryDirectory)
@@ -40,9 +33,20 @@ prepare_scratch () {
 
 zip_frameworks () {
     for i in */*.xcframework; do
-        path=`rename_framework $i`
-        name=`xcframework_name $path`
-        cd "$path/../"; zip -rmq "$name.xcframework.zip" "$name.xcframework"; cd ..
+        name=`xcframework_name $i`
+        cd "$i/../"; zip -rmq "$name.xcframework.zip" "$name.xcframework"; cd ..
+    done;
+}
+
+prepare_files_for_distribution () {
+    dist=$1
+
+    # Create the distribution folder
+    mkdir $dist
+
+    # Move all xcframeworks to the distribution folder
+    for i in */*.xcframework.zip; do
+        cp -f $i $dist
     done;
 }
 
@@ -122,7 +126,7 @@ let package = Package(
   targets: [" >> $package
     # Create targets
     comma=""
-    for i in */*.xcframework.zip; do
+    for i in $1/dist/*.xcframework.zip; do
         output_target $i $xcframeworks_repo $latest $package $comma
         comma=","
     done;
@@ -130,18 +134,6 @@ let package = Package(
   ]
 )
 " >> $package
-}
-
-prepare_files_for_distribution () {
-    dist=$1
-
-    # Create the distribution folder
-    mkdir $dist
-
-    # Move all xcframeworks to the distribution folder
-    for i in */*.xcframework.zip; do
-        mv $i $dist
-    done;
 }
 
 commit_changes() {
@@ -181,10 +173,10 @@ if [ $latest != $current ]; then
     echo "Preparing xcframeworks for release..."
     cd Firebase
     zip_frameworks
-    echo "Creating Package.swift..."
-    output_swift_package $directory
     echo "Creating distribution files..."
     prepare_files_for_distribution "$directory/dist"
+    echo "Creating Package.swift..."
+    output_swift_package $directory
     echo "Merging changes to Github..."
     cd $directory
     commit_changes "release/$latest"
