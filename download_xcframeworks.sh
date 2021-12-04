@@ -123,7 +123,6 @@ let package = Package(
 
 merge_changes () {
     branch=$1
-    repo=$2
 
     # Create and push a new branch
     git checkout -b $branch
@@ -132,7 +131,7 @@ merge_changes () {
     git push -u origin $branch
 
     # Create and merge a PR for the new branch
-    gh pr create --fill --head --repo $repo
+    gh pr create --fill --head
     gh pr merge -d
 }
 
@@ -180,9 +179,9 @@ if [ $latest != $current ]; then
     prepare_files_for_distribution "$directory/dist"
     echo "Merging changes to Github..."
     cd $directory
-    merge_changes "release/$latest" $xcframeworks_repo
+    merge_changes "release/$latest"
     echo "Creating release"
-    gh release create $latest ./dist/*.xcframework.zip
+    gh release create $latest ./dist/*.xcframework.zip -t "Release $latest"
 else
     echo "Up to date."
 fi
