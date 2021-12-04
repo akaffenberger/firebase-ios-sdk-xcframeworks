@@ -4,3 +4,4 @@ dist/
 .swiftpm/
 # ignore artifacts
 .DS_Store
+*.orig
