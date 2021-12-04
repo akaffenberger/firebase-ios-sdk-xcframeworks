@@ -147,11 +147,11 @@ let package = Package(
   dependencies: [
   ],
   targets: [
-    .binaryTarget(
-      name: "FirebaseABTesting-FirebaseABTesting",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/8.10.0/FirebaseABTesting-FirebaseABTesting.xcframework.zip",
-      checksum: "d563f6a77a57de2f8b13667560c37ad309002004f486141b4876e70dd1fc1e59"
-    ),
+//    .binaryTarget(
+//      name: "FirebaseABTesting-FirebaseABTesting",
+//      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/8.10.0/FirebaseABTesting-FirebaseABTesting.xcframework.zip",
+//      checksum: "d563f6a77a57de2f8b13667560c37ad309002004f486141b4876e70dd1fc1e59"
+//    ),
     .binaryTarget(
       name: "FirebaseAnalytics-FirebaseAnalytics",
       url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/8.10.0/FirebaseAnalytics-FirebaseAnalytics.xcframework.zip",
