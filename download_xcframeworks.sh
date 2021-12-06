@@ -207,7 +207,7 @@ commit_changes() {
     branch=$1
     git checkout -b $branch
     git add .
-    git commit -m"Updated Package.swift for latest firebase sdks"
+    git commit -m"Updated Package.swift and sources for latest firebase sdks"
     git push -u origin $branch
 }
 
@@ -230,7 +230,7 @@ current=$(latest_release_number $xcframeworks_repo)
 echo "Upstream: $latest"
 echo "Current: $current"
 
-if [ $latest == $current ]; then
+if [ $latest != $current ]; then
     echo "Version is out of date. Updating..."
     prepare_scratch
     echo "Downloading latest release..."
@@ -246,12 +246,12 @@ if [ $latest == $current ]; then
     generate_sources $directory
     echo "Creating Package.swift..."
     output_swift_package $directory
-#    echo "Merging changes to Github..."
-#    cd $directory
-#    commit_changes "release/$latest"
-#    merge_changes
-#    echo "Creating release"
-#    echo "Release $latest" | gh release create $latest ./dist/*.xcframework.zip
+    echo "Merging changes to Github..."
+    cd $directory
+    commit_changes "release/$latest"
+    merge_changes
+    echo "Creating release"
+    echo "Release $latest" | gh release create $latest ./dist/*.xcframework.zip
 else
     echo "Up to date."
 fi
