@@ -85,6 +85,10 @@ let package = Package(
   ],
   targets: [
     .target(
+      name: "Firebase",
+      publicHeadersPath: "./"
+    ),
+    .target(
       name: "FirebaseABTestingTarget",
       dependencies: [
         "FirebaseAnalyticsTarget",
