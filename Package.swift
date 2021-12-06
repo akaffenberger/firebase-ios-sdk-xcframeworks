@@ -10,13 +10,90 @@ let package = Package(
   products: [
     .library(
       name: "FirebaseABTesting",
-      targets: [
-        "FirebaseABTesting"
-      ]
+      targets: ["FirebaseABTestingTarget"]
     ),
     .library(
       name: "FirebaseAnalytics",
-      targets: [
+      targets: ["FirebaseAnalyticsTarget"]
+    ),
+    .library(
+      name: "FirebaseAppCheck",
+      targets: ["FirebaseAppCheckTarget"]
+    ),
+    .library(
+      name: "FirebaseAppDistribution",
+      targets: ["FirebaseAppDistributionTarget"]
+    ),
+    .library(
+      name: "FirebaseAuth",
+      targets: ["FirebaseAuthTarget"]
+    ),
+    .library(
+      name: "FirebaseCrashlytics",
+      targets: ["FirebaseCrashlyticsTarget"]
+    ),
+    .library(
+      name: "FirebaseDatabase",
+      targets: ["FirebaseDatabaseTarget"]
+    ),
+    .library(
+      name: "FirebaseDynamicLinks",
+      targets: ["FirebaseDynamicLinksTarget"]
+    ),
+    .library(
+      name: "FirebaseFirestore",
+      targets: ["FirebaseFirestoreTarget"]
+    ),
+    .library(
+      name: "FirebaseFunctions",
+      targets: ["FirebaseFunctionsTarget"]
+    ),
+    .library(
+      name: "FirebaseInAppMessaging",
+      targets: ["FirebaseInAppMessagingTarget"]
+    ),
+    .library(
+      name: "FirebaseMLModelDownloader",
+      targets: ["FirebaseMLModelDownloaderTarget"]
+    ),
+    .library(
+      name: "FirebaseMessaging",
+      targets: ["FirebaseMessagingTarget"]
+    ),
+    .library(
+      name: "FirebasePerformance",
+      targets: ["FirebasePerformanceTarget"]
+    ),
+    .library(
+      name: "FirebaseRemoteConfig",
+      targets: ["FirebaseRemoteConfigTarget"]
+    ),
+    .library(
+      name: "FirebaseStorage",
+      targets: ["FirebaseStorageTarget"]
+    ),
+    .library(
+      name: "Google-Mobile-Ads-SDK",
+      targets: ["Google-Mobile-Ads-SDKTarget"]
+    ),
+    .library(
+      name: "GoogleSignIn",
+      targets: ["GoogleSignInTarget"]
+    )
+  ],
+  dependencies: [
+  ],
+  targets: [
+    .target(
+      name: "FirebaseABTestingTarget",
+      dependencies: [
+        "FirebaseAnalyticsTarget",
+        "FirebaseABTesting"
+      ]
+    ),
+    .target(
+      name: "FirebaseAnalyticsTarget",
+      dependencies: [
         "FirebaseAnalytics",
         "FirebaseCore",
         "FirebaseCoreDiagnostics",
@@ -29,124 +106,145 @@ let package = Package(
         "nanopb"
       ]
     ),
-    .library(
-      name: "FirebaseAppCheck",
-      targets: [
+    .target(
+      name: "FirebaseAppCheckTarget",
+      dependencies: [
+        "FirebaseAnalyticsTarget",
         "FirebaseAppCheck"
       ]
     ),
-    .library(
-      name: "FirebaseAppDistribution",
-      targets: [
+    .target(
+      name: "FirebaseAppDistributionTarget",
+      dependencies: [
+        "FirebaseAnalyticsTarget",
         "FirebaseAppDistribution"
       ]
     ),
-    .library(
-      name: "FirebaseAuth",
-      targets: [
+    .target(
+      name: "FirebaseAuthTarget",
+      dependencies: [
+        "FirebaseAnalyticsTarget",
         "FirebaseAuth",
         "GTMSessionFetcher"
       ]
     ),
-    .library(
-      name: "FirebaseCrashlytics",
-      targets: [
+    .target(
+      name: "FirebaseCrashlyticsTarget",
+      dependencies: [
+        "FirebaseAnalyticsTarget",
         "FirebaseCrashlytics"
       ]
     ),
-    .library(
-      name: "FirebaseDatabase",
-      targets: [
+    .target(
+      name: "FirebaseDatabaseTarget",
+      dependencies: [
+        "FirebaseAnalyticsTarget",
         "FirebaseDatabase",
         "leveldb-library"
       ]
     ),
-    .library(
-      name: "FirebaseDynamicLinks",
-      targets: [
+    .target(
+      name: "FirebaseDynamicLinksTarget",
+      dependencies: [
+        "FirebaseAnalyticsTarget",
         "FirebaseDynamicLinks"
       ]
     ),
-    .library(
-      name: "FirebaseFirestore",
-      targets: [
+    .target(
+      name: "FirebaseFirestoreTarget",
+      dependencies: [
+        "FirebaseAnalyticsTarget",
         "BoringSSL-GRPC",
         "FirebaseFirestore",
         "abseil",
         "gRPC-C++",
         "gRPC-Core",
         "leveldb-library"
+      ],
+      resources: [
+        .process("Resources/gRPCCertificates-Cpp.bundle")
       ]
     ),
-    .library(
-      name: "FirebaseFunctions",
-      targets: [
+    .target(
+      name: "FirebaseFunctionsTarget",
+      dependencies: [
+        "FirebaseAnalyticsTarget",
         "FirebaseFunctions",
         "GTMSessionFetcher"
       ]
     ),
-    .library(
-      name: "FirebaseInAppMessaging",
-      targets: [
+    .target(
+      name: "FirebaseInAppMessagingTarget",
+      dependencies: [
+        "FirebaseAnalyticsTarget",
         "FirebaseABTesting",
         "FirebaseInAppMessaging"
+      ],
+      resources: [
+        .process("Resources/InAppMessagingDisplayResources.bundle")
       ]
     ),
-    .library(
-      name: "FirebaseMLModelDownloader",
-      targets: [
+    .target(
+      name: "FirebaseMLModelDownloaderTarget",
+      dependencies: [
+        "FirebaseAnalyticsTarget",
         "FirebaseMLModelDownloader",
         "SwiftProtobuf"
       ]
     ),
-    .library(
-      name: "FirebaseMessaging",
-      targets: [
+    .target(
+      name: "FirebaseMessagingTarget",
+      dependencies: [
+        "FirebaseAnalyticsTarget",
         "FirebaseMessaging"
       ]
     ),
-    .library(
-      name: "FirebasePerformance",
-      targets: [
+    .target(
+      name: "FirebasePerformanceTarget",
+      dependencies: [
+        "FirebaseAnalyticsTarget",
         "FirebaseABTesting",
         "FirebasePerformance",
         "FirebaseRemoteConfig"
       ]
     ),
-    .library(
-      name: "FirebaseRemoteConfig",
-      targets: [
+    .target(
+      name: "FirebaseRemoteConfigTarget",
+      dependencies: [
+        "FirebaseAnalyticsTarget",
         "FirebaseABTesting",
         "FirebaseRemoteConfig"
       ]
     ),
-    .library(
-      name: "FirebaseStorage",
-      targets: [
+    .target(
+      name: "FirebaseStorageTarget",
+      dependencies: [
+        "FirebaseAnalyticsTarget",
         "FirebaseStorage",
         "GTMSessionFetcher"
       ]
     ),
-    .library(
-      name: "Google-Mobile-Ads-SDK",
-      targets: [
+    .target(
+      name: "Google-Mobile-Ads-SDKTarget",
+      dependencies: [
+        "FirebaseAnalyticsTarget",
         "GoogleMobileAds",
         "UserMessagingPlatform"
       ]
     ),
-    .library(
-      name: "GoogleSignIn",
-      targets: [
+    .target(
+      name: "GoogleSignInTarget",
+      dependencies: [
+        "FirebaseAnalyticsTarget",
         "AppAuth",
         "GTMAppAuth",
         "GTMSessionFetcher",
         "GoogleSignIn"
+      ],
+      resources: [
+        .process("Resources/GoogleSignIn.bundle")
       ]
-    )
-  ],
-  dependencies: [
-  ],
-  targets: [
+    ),
     .binaryTarget(
       name: "AppAuth",
       url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/8.10.0/AppAuth.xcframework.zip",
