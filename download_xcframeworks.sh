@@ -62,6 +62,12 @@ generate_sources () {
     rm -rf $sources
     mkdir $sources
 
+    # The sources for the umbrella header and modulemap
+    mkdir "$sources/Firebase"
+    cp -f "Firebase.h" "$sources/Firebase"
+    cp -f "module.modulemap" "$sources/Firebase"
+    touch "$sources/Firebase/dummy.m"
+
     # Create a source folder for each library
     for i in */; do
         name="$(library_name $i)Target"
@@ -184,7 +190,12 @@ let package = Package(
   ],
   dependencies: [
   ],
-  targets: [" >> $package
+  targets: [
+    .target(
+      name: \"Firebase\",
+      publicHeadersPath: \"./\"
+    )," >> $package
+
     # Create targets
     comma=""
     # Library targets that define each library's binary dependencies and resources
@@ -230,7 +241,7 @@ current=$(latest_release_number $xcframeworks_repo)
 echo "Upstream: $latest"
 echo "Current: $current"
 
-if [ $latest != $current ]; then
+if [ $latest == $current ]; then
     echo "Version is out of date. Updating..."
     prepare_scratch
     echo "Downloading latest release..."
@@ -246,12 +257,12 @@ if [ $latest != $current ]; then
     generate_sources $directory
     echo "Creating Package.swift..."
     output_swift_package $directory
-    echo "Merging changes to Github..."
-    cd $directory
-    commit_changes "release/$latest"
-    merge_changes
-    echo "Creating release"
-    echo "Release $latest" | gh release create $latest ./dist/*.xcframework.zip
+#    echo "Merging changes to Github..."
+#    cd $directory
+#    commit_changes "release/$latest"
+#    merge_changes
+#    echo "Creating release"
+#    echo "Release $latest" | gh release create $latest ./dist/*.xcframework.zip
 else
     echo "Up to date."
 fi
