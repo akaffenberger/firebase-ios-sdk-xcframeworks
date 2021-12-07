@@ -42,6 +42,7 @@ dist/
 
 # ignore swift package manager files
 .swiftpm/
+.build/
 
 # ignore artifacts
 .DS_Store
