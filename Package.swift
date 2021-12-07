@@ -91,6 +91,7 @@ let package = Package(
     .target(
       name: "FirebaseABTestingTarget",
       dependencies: [
+        "Firebase",
         "FirebaseAnalyticsTarget",
         "FirebaseABTesting"
       ]
@@ -98,6 +99,7 @@ let package = Package(
     .target(
       name: "FirebaseAnalyticsTarget",
       dependencies: [
+        "Firebase",
         "FirebaseAnalytics",
         "FirebaseCore",
         "FirebaseCoreDiagnostics",
@@ -113,6 +115,7 @@ let package = Package(
     .target(
       name: "FirebaseAppCheckTarget",
       dependencies: [
+        "Firebase",
         "FirebaseAnalyticsTarget",
         "FirebaseAppCheck"
       ]
@@ -120,6 +123,7 @@ let package = Package(
     .target(
       name: "FirebaseAppDistributionTarget",
       dependencies: [
+        "Firebase",
         "FirebaseAnalyticsTarget",
         "FirebaseAppDistribution"
       ]
@@ -127,6 +131,7 @@ let package = Package(
     .target(
       name: "FirebaseAuthTarget",
       dependencies: [
+        "Firebase",
         "FirebaseAnalyticsTarget",
         "FirebaseAuth",
         "GTMSessionFetcher"
@@ -135,6 +140,7 @@ let package = Package(
     .target(
       name: "FirebaseCrashlyticsTarget",
       dependencies: [
+        "Firebase",
         "FirebaseAnalyticsTarget",
         "FirebaseCrashlytics"
       ]
@@ -142,6 +148,7 @@ let package = Package(
     .target(
       name: "FirebaseDatabaseTarget",
       dependencies: [
+        "Firebase",
         "FirebaseAnalyticsTarget",
         "FirebaseDatabase",
         "leveldb-library"
@@ -150,6 +157,7 @@ let package = Package(
     .target(
       name: "FirebaseDynamicLinksTarget",
       dependencies: [
+        "Firebase",
         "FirebaseAnalyticsTarget",
         "FirebaseDynamicLinks"
       ]
@@ -157,6 +165,7 @@ let package = Package(
     .target(
       name: "FirebaseFirestoreTarget",
       dependencies: [
+        "Firebase",
         "FirebaseAnalyticsTarget",
         "BoringSSL-GRPC",
         "FirebaseFirestore",
@@ -172,6 +181,7 @@ let package = Package(
     .target(
       name: "FirebaseFunctionsTarget",
       dependencies: [
+        "Firebase",
         "FirebaseAnalyticsTarget",
         "FirebaseFunctions",
         "GTMSessionFetcher"
@@ -180,6 +190,7 @@ let package = Package(
     .target(
       name: "FirebaseInAppMessagingTarget",
       dependencies: [
+        "Firebase",
         "FirebaseAnalyticsTarget",
         "FirebaseABTesting",
         "FirebaseInAppMessaging"
@@ -191,6 +202,7 @@ let package = Package(
     .target(
       name: "FirebaseMLModelDownloaderTarget",
       dependencies: [
+        "Firebase",
         "FirebaseAnalyticsTarget",
         "FirebaseMLModelDownloader",
         "SwiftProtobuf"
@@ -199,6 +211,7 @@ let package = Package(
     .target(
       name: "FirebaseMessagingTarget",
       dependencies: [
+        "Firebase",
         "FirebaseAnalyticsTarget",
         "FirebaseMessaging"
       ]
@@ -206,6 +219,7 @@ let package = Package(
     .target(
       name: "FirebasePerformanceTarget",
       dependencies: [
+        "Firebase",
         "FirebaseAnalyticsTarget",
         "FirebaseABTesting",
         "FirebasePerformance",
@@ -215,6 +229,7 @@ let package = Package(
     .target(
       name: "FirebaseRemoteConfigTarget",
       dependencies: [
+        "Firebase",
         "FirebaseAnalyticsTarget",
         "FirebaseABTesting",
         "FirebaseRemoteConfig"
@@ -223,6 +238,7 @@ let package = Package(
     .target(
       name: "FirebaseStorageTarget",
       dependencies: [
+        "Firebase",
         "FirebaseAnalyticsTarget",
         "FirebaseStorage",
         "GTMSessionFetcher"
@@ -231,6 +247,7 @@ let package = Package(
     .target(
       name: "Google-Mobile-Ads-SDKTarget",
       dependencies: [
+        "Firebase",
         "FirebaseAnalyticsTarget",
         "GoogleMobileAds",
         "UserMessagingPlatform"
@@ -239,6 +256,7 @@ let package = Package(
     .target(
       name: "GoogleSignInTarget",
       dependencies: [
+        "Firebase",
         "FirebaseAnalyticsTarget",
         "AppAuth",
         "GTMAppAuth",
