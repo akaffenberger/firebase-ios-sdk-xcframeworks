@@ -132,18 +132,16 @@ output_library_target () {
     printf "$comma
     .target(
       name: \"$target\",
-      dependencies: [" >> $output
+      dependencies: [
+        \"Firebase\"" >> $output
 
-    # Binary dependencies
-    comma=""
     # All targets depend on the core FirebaseAnalytics binaries
     if [ $target != "FirebaseAnalyticsTarget" ]; then
-        printf "\n        \"FirebaseAnalyticsTarget\"" >> $output
-        comma=","
+        printf ",\n        \"FirebaseAnalyticsTarget\"" >> $output
     fi
     # Other binary dependencies are expected to be inside the library folder
     echo "$dependencies" | while read -r dependency; do
-        printf "$comma\n        \"$(xcframework_name $dependency)\"" >> $output
+        printf ",\n        \"$(xcframework_name $dependency)\"" >> $output
         comma=","
     done
     printf "\n      ]" >> $output
