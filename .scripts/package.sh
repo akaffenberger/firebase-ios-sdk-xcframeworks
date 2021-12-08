@@ -247,7 +247,7 @@ xcframeworks_repo="https://github.com/akaffenberger/firebase-ios-sdk-xcframework
 latest=$(latest_release_number $firebase_repo)
 current=$(latest_release_number $xcframeworks_repo)
 
-if [ $latest == $current ]; then
+if [ $latest != $current ]; then
     echo "$current is out of date. Updating to $latest..."
     distribution="dist"
     sources="Sources"
