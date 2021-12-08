@@ -6,7 +6,7 @@ latest_release_number () {
     # Regex to find the version number, assumes semantic versioning
     grep -Eo '[0-9]+\.[0-9]+\.[0-9]+' |
     # Take the first match in the regex
-    head -1
+    head -1 || echo '0.0.0'
 }
 
 xcframework_name () {
@@ -55,7 +55,7 @@ zip_frameworks () {
         # Rename the framework
         mv "$name.xcframework" "${name}${suffix}.xcframework"
         # Zip the framework
-        zip -rq "${name}${suffix}.xcframework.zip" "${name}${suffix}.xcframework"
+        zip -rqo "${name}${suffix}.xcframework.zip" "${name}${suffix}.xcframework"
     ) & done;
     wait
 }
@@ -289,11 +289,9 @@ if [ $latest != $current ]; then
     echo "Moving files to repo..."
     cd ..
     # Remove any existing files
-    if [ -d $distribution ]; then rm -rf "$distribution"; fi
     if [ -d $sources ]; then rm -rf "$sources"; fi
     if [ -f $package ]; then rm -f "$package"; fi
     # Move generated files into the repo directory
-    mv "$scratch/$distribution" "$distribution"
     mv "$scratch/$sources" "$sources"
     mv "$scratch/$package" "$package"
     # Deploy to repository
@@ -301,7 +299,7 @@ if [ $latest != $current ]; then
     commit_changes "release/$latest"
     merge_changes
     echo "Creating release"
-    echo "Release $latest" | gh release create $latest ./dist/*.xcframework.zip
+    echo "Release $latest" | gh release create $latest $scratch/dist/*.xcframework.zip
 else
     echo "$current is up to date."
 fi
