@@ -27,6 +27,11 @@ library_name () {
     echo $1 | sed -E 's/\/|\/.*\.xcframework|\/.*\.xcframework\.zip//g'
 }
 
+excludes () {
+    # Files other than xcframeworks and resources will not be included in the package
+    echo "$1" | grep -v -E ".xcframework|Resources"
+}
+
 trim_empty_lines () {
     # Delete all empty lines in a file
     sed -i '' '/^$/d' $1
@@ -43,8 +48,9 @@ template_replace () {
 create_scratch () {
     # Create temporary directory
     scratch=$(mktemp -d -t TemporaryDirectory)
+    if [[ $debug ]]; then open $scratch; fi
     # Run cleanup on exit
-    trap "rm -rf \"$scratch\"" EXIT
+    trap "if [[ \$debug ]]; then read -p \"\"; fi; rm -rf \"$scratch\"" EXIT
 }
 
 zip_frameworks () {
@@ -76,13 +82,22 @@ generate_sources () {
     touch "$sources/Firebase/dummy.m" # SPM requires at least one source file
     # Create a source folder for each library target
     for i in */; do
-        local name="$(library_name $i)Target";
+        local name="$(library_name $i)";
         mkdir "$sources/${name}"
         touch "$sources/$name/dummy.swift" # SPM requires at least one source file
         # Copy resources for the target to the source folder
         if [ -d "$i/Resources" ]; then
             cp -rf "$i/Resources" "$sources/$name"
         fi
+        # Copy any non-resource/non-xcframework files
+        for f in ${i}*; do if [[ $(excludes $f) ]]; then
+            # Copy file(s) to sources
+            if [[ -d $f ]]; then
+                cp -rf $f "$sources/$name"
+            else
+                cp -f $f "$sources/$name"
+            fi
+        fi; done;
     done;
 }
 
@@ -126,7 +141,7 @@ write_target () {
     local comma=$3
     local target="${library}Target"
     local dependencies=$(ls -1A $library | grep .xcframework.zip)
-
+    local excludes=$(excludes "$(ls -1A $library)")
     # Write to file
     touch $output
     printf "$comma
@@ -141,16 +156,25 @@ write_target () {
     # Library specific dependencies are expected to be inside the $library folder
     echo "$dependencies" | while read -r dependency; do printf ",
         $(cd $library; conditional_dependency $dependency)" >> $output
-    done
+    done; printf "\n      ]" >> $output;
+    # Path
+    printf ",\n      path: \"Sources/$library\"" >> $output
+    # Non-resource, non-xcframework files
+    if [[ $excludes ]]; then
+        printf ",\n      exclude: [" >> $output
+        comma=""; echo "$excludes" | while read -r exclude; do printf "$comma
+        \"$exclude\"" >> $output; comma=",";
+        done; printf "\n      ]" >> $output;
+    fi
     # Resources are expected to be inside the $library/Resources folder
     if [ -d "$library/Resources" ]; then
-        printf "\n      ],\n      resources: [" >> $output
+        printf ",\n      resources: [" >> $output
         comma=""; for i in "$library/Resources/*"; do printf "$comma
         .process(\"Resources/$(resource_name $i)\")" >> $output; comma=","
-        done;
+        done; printf "\n      ]" >> $output;
     fi
-    # Closing brackets
-    printf "\n      ]\n    )" >> $output
+    # Closing bracket
+    printf "\n    )" >> $output
 }
 
 write_binary () {
@@ -247,7 +271,11 @@ xcframeworks_repo="https://github.com/akaffenberger/firebase-ios-sdk-xcframework
 latest=$(latest_release_number $firebase_repo)
 current=$(latest_release_number $xcframeworks_repo)
 
-if [ $latest != $current ]; then
+# Args
+debug=$(echo $@ || "" | grep debug)
+skip_release=$(echo $@ || "" | grep skip-release)
+
+if [[ $latest != $current || $debug ]]; then
     echo "$current is out of date. Updating to $latest..."
     distribution="dist"
     sources="Sources"
@@ -281,20 +309,23 @@ if [ $latest != $current ]; then
         (cd ..; swift package dump-package | read pac)
     )
 
-    echo "Moving files to repo..."
-    cd ..
+    echo "Moving files to repo..."; cd ..
     # Remove any existing files
     if [ -d $sources ]; then rm -rf "$sources"; fi
     if [ -f $package ]; then rm -f "$package"; fi
     # Move generated files into the repo directory
     mv "$scratch/$sources" "$sources"
     mv "$scratch/$package" "$package"
+
+    # Skips deploy
+    if [[ $skip_release ]]; then exit 0; fi
+
     # Deploy to repository
     echo "Merging changes to Github..."
     commit_changes "release/$latest"
     merge_changes
-    echo "Creating release"
-    echo "Release $latest" | gh release create $latest $scratch/dist/*.xcframework.zip
+    echo "Creating release draft"
+    echo "Release $latest" | gh release create --draft $latest $scratch/dist/*.xcframework.zip
 else
     echo "$current is up to date."
 fi
