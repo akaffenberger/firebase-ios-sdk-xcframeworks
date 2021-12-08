@@ -93,7 +93,8 @@ let package = Package(
         "Firebase",
         "FirebaseAnalyticsTarget",
         "FirebaseABTesting"
-      ]
+      ],
+      path: "Sources/FirebaseABTesting"
     ),
     .target(
       name: "FirebaseAnalyticsTarget",
@@ -109,7 +110,8 @@ let package = Package(
         "GoogleUtilities",
         "PromisesObjC",
         "nanopb"
-      ]
+      ],
+      path: "Sources/FirebaseAnalytics"
     ),
     .target(
       name: "FirebaseAppCheckTarget",
@@ -117,7 +119,8 @@ let package = Package(
         "Firebase",
         "FirebaseAnalyticsTarget",
         "FirebaseAppCheck"
-      ]
+      ],
+      path: "Sources/FirebaseAppCheck"
     ),
     .target(
       name: "FirebaseAppDistributionTarget",
@@ -125,7 +128,8 @@ let package = Package(
         "Firebase",
         "FirebaseAnalyticsTarget",
         .target(name: "FirebaseAppDistribution", condition: .when(platforms: [.iOS]))
-      ]
+      ],
+      path: "Sources/FirebaseAppDistribution"
     ),
     .target(
       name: "FirebaseAuthTarget",
@@ -134,7 +138,8 @@ let package = Package(
         "FirebaseAnalyticsTarget",
         "FirebaseAuth",
         "GTMSessionFetcher"
-      ]
+      ],
+      path: "Sources/FirebaseAuth"
     ),
     .target(
       name: "FirebaseCrashlyticsTarget",
@@ -142,6 +147,11 @@ let package = Package(
         "Firebase",
         "FirebaseAnalyticsTarget",
         "FirebaseCrashlytics"
+      ],
+      path: "Sources/FirebaseCrashlytics",
+      exclude: [
+        "run",
+        "upload-symbols"
       ]
     ),
     .target(
@@ -151,7 +161,8 @@ let package = Package(
         "FirebaseAnalyticsTarget",
         "FirebaseDatabase",
         "leveldb-library"
-      ]
+      ],
+      path: "Sources/FirebaseDatabase"
     ),
     .target(
       name: "FirebaseDynamicLinksTarget",
@@ -159,7 +170,8 @@ let package = Package(
         "Firebase",
         "FirebaseAnalyticsTarget",
         .target(name: "FirebaseDynamicLinks", condition: .when(platforms: [.iOS]))
-      ]
+      ],
+      path: "Sources/FirebaseDynamicLinks"
     ),
     .target(
       name: "FirebaseFirestoreTarget",
@@ -173,6 +185,7 @@ let package = Package(
         "gRPC-Core",
         "leveldb-library"
       ],
+      path: "Sources/FirebaseFirestore",
       resources: [
         .process("Resources/gRPCCertificates-Cpp.bundle")
       ]
@@ -184,7 +197,8 @@ let package = Package(
         "FirebaseAnalyticsTarget",
         "FirebaseFunctions",
         "GTMSessionFetcher"
-      ]
+      ],
+      path: "Sources/FirebaseFunctions"
     ),
     .target(
       name: "FirebaseInAppMessagingTarget",
@@ -194,6 +208,7 @@ let package = Package(
         "FirebaseABTesting",
         .target(name: "FirebaseInAppMessaging", condition: .when(platforms: [.iOS]))
       ],
+      path: "Sources/FirebaseInAppMessaging",
       resources: [
         .process("Resources/InAppMessagingDisplayResources.bundle")
       ]
@@ -205,7 +220,8 @@ let package = Package(
         "FirebaseAnalyticsTarget",
         "FirebaseMLModelDownloader",
         "SwiftProtobuf"
-      ]
+      ],
+      path: "Sources/FirebaseMLModelDownloader"
     ),
     .target(
       name: "FirebaseMessagingTarget",
@@ -213,7 +229,8 @@ let package = Package(
         "Firebase",
         "FirebaseAnalyticsTarget",
         "FirebaseMessaging"
-      ]
+      ],
+      path: "Sources/FirebaseMessaging"
     ),
     .target(
       name: "FirebasePerformanceTarget",
@@ -223,7 +240,8 @@ let package = Package(
         "FirebaseABTesting",
         .target(name: "FirebasePerformance", condition: .when(platforms: [.iOS, .tvOS])),
         "FirebaseRemoteConfig"
-      ]
+      ],
+      path: "Sources/FirebasePerformance"
     ),
     .target(
       name: "FirebaseRemoteConfigTarget",
@@ -232,7 +250,8 @@ let package = Package(
         "FirebaseAnalyticsTarget",
         "FirebaseABTesting",
         "FirebaseRemoteConfig"
-      ]
+      ],
+      path: "Sources/FirebaseRemoteConfig"
     ),
     .target(
       name: "FirebaseStorageTarget",
@@ -241,7 +260,8 @@ let package = Package(
         "FirebaseAnalyticsTarget",
         "FirebaseStorage",
         "GTMSessionFetcher"
-      ]
+      ],
+      path: "Sources/FirebaseStorage"
     ),
     .target(
       name: "Google-Mobile-Ads-SDKTarget",
@@ -250,7 +270,8 @@ let package = Package(
         "FirebaseAnalyticsTarget",
         .target(name: "GoogleMobileAds", condition: .when(platforms: [.iOS])),
         .target(name: "UserMessagingPlatform", condition: .when(platforms: [.iOS]))
-      ]
+      ],
+      path: "Sources/Google-Mobile-Ads-SDK"
     ),
     .target(
       name: "GoogleSignInTarget",
@@ -262,6 +283,7 @@ let package = Package(
         "GTMSessionFetcher",
         .target(name: "GoogleSignIn", condition: .when(platforms: [.iOS]))
       ],
+      path: "Sources/GoogleSignIn",
       resources: [
         .process("Resources/GoogleSignIn.bundle")
       ]
