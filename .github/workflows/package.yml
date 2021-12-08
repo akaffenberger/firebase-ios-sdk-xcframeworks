@@ -2,6 +2,7 @@ name: Publish Release
 
 on:
   - workflow_dispatch
+  - push
   - schedule:
       - cron: '0 0 * * *' # Once per day at midnight
 
