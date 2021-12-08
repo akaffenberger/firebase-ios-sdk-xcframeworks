@@ -290,11 +290,11 @@ if [ $latest == $current ]; then
     mv "$scratch/$sources" "$sources"
     mv "$scratch/$package" "$package"
     # Deploy to repository
-#    echo "Merging changes to Github..."
-#    commit_changes "release/$latest"
-#    merge_changes
-#    echo "Creating release"
-#    echo "Release $latest" | gh release create $latest $scratch/dist/*.xcframework.zip
+    echo "Merging changes to Github..."
+    commit_changes "release/$latest"
+    merge_changes
+    echo "Creating release"
+    echo "Release $latest" | gh release create $latest $scratch/dist/*.xcframework.zip
 else
     echo "$current is up to date."
 fi
