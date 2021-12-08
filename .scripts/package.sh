@@ -49,13 +49,8 @@ create_scratch () {
 
 zip_frameworks () {
     for i in */*.xcframework; do (
-        cd "$i/../";
-        # Suffix to avoid target name collision
-        local name=$(xcframework_name $i); suffix="-xcf"
-        # Rename the framework
-        mv "$name.xcframework" "${name}${suffix}.xcframework"
-        # Zip the framework
-        zip -rqo "${name}${suffix}.xcframework.zip" "${name}${suffix}.xcframework"
+        local name=$(xcframework_name $i)
+        cd "$i/../"; zip -rqo "$name.xcframework.zip" "$name.xcframework"
     ) & done;
     wait
 }
@@ -81,8 +76,8 @@ generate_sources () {
     touch "$sources/Firebase/dummy.m" # SPM requires at least one source file
     # Create a source folder for each library target
     for i in */; do
-        local name="$(library_name $i)";
-        mkdir "$sources/$name"
+        local name="$(library_name $i)Target";
+        mkdir "$sources/${name}"
         touch "$sources/$name/dummy.swift" # SPM requires at least one source file
         # Copy resources for the target to the source folder
         if [ -d "$i/Resources" ]; then
@@ -101,7 +96,7 @@ write_library () {
     printf "$comma
     .library(
       name: \"$library\",
-      targets: [\"$library\"]
+      targets: [\"${library}Target\"]
     )" >> $output
 }
 
@@ -129,7 +124,7 @@ write_target () {
     local library=$(library_name $1)
     local output=$2
     local comma=$3
-    local target="$library"
+    local target="${library}Target"
     local dependencies=$(ls -1A $library | grep .xcframework.zip)
 
     # Write to file
@@ -252,7 +247,7 @@ xcframeworks_repo="https://github.com/akaffenberger/firebase-ios-sdk-xcframework
 latest=$(latest_release_number $firebase_repo)
 current=$(latest_release_number $xcframeworks_repo)
 
-if [ $latest != $current ]; then
+if [ $latest == $current ]; then
     echo "$current is out of date. Updating to $latest..."
     distribution="dist"
     sources="Sources"
@@ -295,11 +290,11 @@ if [ $latest != $current ]; then
     mv "$scratch/$sources" "$sources"
     mv "$scratch/$package" "$package"
     # Deploy to repository
-    echo "Merging changes to Github..."
-    commit_changes "release/$latest"
-    merge_changes
-    echo "Creating release"
-    echo "Release $latest" | gh release create $latest $scratch/dist/*.xcframework.zip
+#    echo "Merging changes to Github..."
+#    commit_changes "release/$latest"
+#    merge_changes
+#    echo "Creating release"
+#    echo "Release $latest" | gh release create $latest $scratch/dist/*.xcframework.zip
 else
     echo "$current is up to date."
 fi
