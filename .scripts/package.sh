@@ -252,11 +252,7 @@ commit_changes() {
     git add .
     git commit -m"Updated Package.swift and sources for latest firebase sdks"
     git push -u origin $branch
-}
-
-merge_changes () {
     gh pr create --fill
-    gh pr merge -rd
 }
 
 # Exit when any command fails
@@ -323,9 +319,8 @@ if [[ $latest != $current || $debug ]]; then
     # Deploy to repository
     echo "Merging changes to Github..."
     commit_changes "release/$latest"
-    merge_changes
     echo "Creating release draft"
-    echo "Release $latest" | gh release create --draft $latest $scratch/dist/*.xcframework.zip
+    echo "Release $latest" | gh release create --target "release/$latest" --draft $latest $scratch/dist/*.xcframework.zip
 else
     echo "$current is up to date."
 fi
