@@ -135,8 +135,8 @@ write_target () {
       dependencies: [
         \"Firebase\"" >> $output
     # All targets depend on the core FirebaseAnalytics binaries
-    if [ $target != "FirebaseAnalytics" ]; then printf ",
-        \"FirebaseAnalytics\"" >> $output
+    if [ $target != "FirebaseAnalyticsTarget" ]; then printf ",
+        \"FirebaseAnalyticsTarget\"" >> $output
     fi
     # Library specific dependencies are expected to be inside the $library folder
     echo "$dependencies" | while read -r dependency; do printf ",
