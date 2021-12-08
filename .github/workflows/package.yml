@@ -1,12 +1,10 @@
 name: Publish Release
 
 on:
-  - workflow_dispatch
-  - push
-      branches:
-        - master
-  - schedule:
-      - cron: '0 0 * * *' # Once per day at midnight
+  workflow_dispatch:
+  push:
+  schedule:
+    - cron: '0 0 * * *' # Once per day at midnight
 
 jobs:
   build:
