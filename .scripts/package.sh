@@ -43,8 +43,9 @@ template_replace () {
 create_scratch () {
     # Create temporary directory
     scratch=$(mktemp -d -t TemporaryDirectory)
+    open $scratch
     # Run cleanup on exit
-    trap "rm -rf \"$scratch\"" EXIT
+    trap "read -p \"\"; rm -rf \"$scratch\"" EXIT
 }
 
 zip_frameworks () {
@@ -105,6 +106,26 @@ write_library () {
     )" >> $output
 }
 
+conditional_dependency () {
+    local name=$(xcframework_name "$1")
+    local output="$2"
+    # Check xcframework folder for platform specific architectures
+    local ios=$(ls "$name.xcframework" | grep "ios-" >/dev/null && echo ".iOS")
+    local tvos=$(ls "$name.xcframework" | grep "tvos-" >/dev/null && echo ".tvOS")
+    local macos=$(ls "$name.xcframework" | grep "macos-" >/dev/null && echo ".macOS")
+    # Get array of platforms
+    local platforms=($ios $tvos $macos)
+    # Join platforms with comma and space separation
+    local joined=$( echo ${platforms[*]} | sed 's/ /, /g' )
+    if [ "$joined" == ".iOS, .tvOS, .macOS" ]; then
+        # Supports all platforms, conditional not needed
+        echo "\"$name\""
+    else
+        # Create conditional dependency from target and platforms
+        echo ".target(name: \"$name\", condition: .when(platforms: [$joined]))"
+    fi
+}
+
 write_target () {
     local library=$(library_name $1)
     local output=$2
@@ -125,7 +146,7 @@ write_target () {
     fi
     # Library specific dependencies are expected to be inside the $library folder
     echo "$dependencies" | while read -r dependency; do printf ",
-        \"$(xcframework_name $dependency)\"" >> $output
+        $(cd $library; conditional_dependency $dependency)" >> $output
     done
     # Resources are expected to be inside the $library/Resources folder
     if [ -d "$library/Resources" ]; then
@@ -266,22 +287,22 @@ if [ $latest != $current ]; then
         (cd ..; swift package dump-package | read pac)
     )
 
-    echo "Moving files to repo..."
-    cd ..
-    # Remove any existing files
-    if [ -d $distribution ]; then rm -rf "$distribution"; fi
-    if [ -d $sources ]; then rm -rf "$sources"; fi
-    if [ -f $package ]; then rm -f "$package"; fi
-    # Move generated files into the repo directory
-    mv "$scratch/$distribution" "$distribution"
-    mv "$scratch/$sources" "$sources"
-    mv "$scratch/$package" "$package"
-    # Deploy to repository
-    echo "Merging changes to Github..."
-    commit_changes "release/$latest"
-    merge_changes
-    echo "Creating release"
-    echo "Release $latest" | gh release create $latest ./dist/*.xcframework.zip
+#    echo "Moving files to repo..."
+#    cd ..
+#    # Remove any existing files
+#    if [ -d $distribution ]; then rm -rf "$distribution"; fi
+#    if [ -d $sources ]; then rm -rf "$sources"; fi
+#    if [ -f $package ]; then rm -f "$package"; fi
+#    # Move generated files into the repo directory
+#    mv "$scratch/$distribution" "$distribution"
+#    mv "$scratch/$sources" "$sources"
+#    mv "$scratch/$package" "$package"
+#    # Deploy to repository
+#    echo "Merging changes to Github..."
+#    commit_changes "release/$latest"
+#    merge_changes
+#    echo "Creating release"
+#    echo "Release $latest" | gh release create $latest ./dist/*.xcframework.zip
 else
     echo "$current is up to date."
 fi
