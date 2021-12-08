@@ -8,7 +8,7 @@ let package = Package(
   platforms: [.iOS(.v11), .macOS(.v10_12), .tvOS(.v12), .watchOS(.v7)],
   products: [
     .library(
-      name: "FirebaseABTesting",
+      name: "FirebaseABTesting-force",
       targets: ["FirebaseABTestingTarget"]
     ),
     .library(
