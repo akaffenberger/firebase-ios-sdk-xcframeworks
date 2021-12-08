@@ -3,6 +3,8 @@ name: Publish Release
 on:
   - workflow_dispatch
   - push
+      branches:
+        - master
   - schedule:
       - cron: '0 0 * * *' # Once per day at midnight
 
@@ -10,11 +12,11 @@ jobs:
   build:
     runs-on: macos-latest
     steps:
-        - name: Checkout
-          uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
 
-        - name: Authorize
-          run: gh auth login --with-token ${{ secrets.GITHUB_TOKEN }}
+      - name: Authorize
+        run: gh auth login --with-token ${{ secrets.GITHUB_TOKEN }}
 
-        - name: Release
-          run: cd .scripts && sh ./package.sh
+      - name: Release
+        run: cd .scripts && sh ./package.sh
