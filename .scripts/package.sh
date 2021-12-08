@@ -43,9 +43,8 @@ template_replace () {
 create_scratch () {
     # Create temporary directory
     scratch=$(mktemp -d -t TemporaryDirectory)
-    open $scratch
     # Run cleanup on exit
-    trap "read -p \"\"; rm -rf \"$scratch\"" EXIT
+    trap "rm -rf \"$scratch\"" EXIT
 }
 
 zip_frameworks () {
@@ -287,22 +286,22 @@ if [ $latest != $current ]; then
         (cd ..; swift package dump-package | read pac)
     )
 
-#    echo "Moving files to repo..."
-#    cd ..
-#    # Remove any existing files
-#    if [ -d $distribution ]; then rm -rf "$distribution"; fi
-#    if [ -d $sources ]; then rm -rf "$sources"; fi
-#    if [ -f $package ]; then rm -f "$package"; fi
-#    # Move generated files into the repo directory
-#    mv "$scratch/$distribution" "$distribution"
-#    mv "$scratch/$sources" "$sources"
-#    mv "$scratch/$package" "$package"
-#    # Deploy to repository
-#    echo "Merging changes to Github..."
-#    commit_changes "release/$latest"
-#    merge_changes
-#    echo "Creating release"
-#    echo "Release $latest" | gh release create $latest ./dist/*.xcframework.zip
+    echo "Moving files to repo..."
+    cd ..
+    # Remove any existing files
+    if [ -d $distribution ]; then rm -rf "$distribution"; fi
+    if [ -d $sources ]; then rm -rf "$sources"; fi
+    if [ -f $package ]; then rm -f "$package"; fi
+    # Move generated files into the repo directory
+    mv "$scratch/$distribution" "$distribution"
+    mv "$scratch/$sources" "$sources"
+    mv "$scratch/$package" "$package"
+    # Deploy to repository
+    echo "Merging changes to Github..."
+    commit_changes "release/$latest"
+    merge_changes
+    echo "Creating release"
+    echo "Release $latest" | gh release create $latest ./dist/*.xcframework.zip
 else
     echo "$current is up to date."
 fi
