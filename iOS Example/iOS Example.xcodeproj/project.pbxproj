@@ -8,18 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		FD6C1C8B275EE2DE000FD5CF /* iOS_ExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6C1C8A275EE2DE000FD5CF /* iOS_ExampleApp.swift */; };
-		FD6C1C8D275EE2DE000FD5CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6C1C8C275EE2DE000FD5CF /* ContentView.swift */; };
 		FD6C1C8F275EE2E1000FD5CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD6C1C8E275EE2E1000FD5CF /* Assets.xcassets */; };
 		FD6C1C92275EE2E1000FD5CF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD6C1C91275EE2E1000FD5CF /* Preview Assets.xcassets */; };
 		FD6C1C9A275EE466000FD5CF /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FD6C1C99275EE466000FD5CF /* FirebaseAnalytics */; };
+		FDD120AE2825B98500895F3D /* FirebaseInAppMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = FDD120AD2825B98500895F3D /* FirebaseInAppMessaging */; };
+		FDD120B02825B99000895F3D /* FirebaseDynamicLinks in Frameworks */ = {isa = PBXBuildFile; productRef = FDD120AF2825B99000895F3D /* FirebaseDynamicLinks */; };
+		FDD120B32825BA1700895F3D /* InAppMessagingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD120B22825BA1700895F3D /* InAppMessagingAppDelegate.swift */; };
+		FDD120B52825BAC300895F3D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FDD120B42825BAC300895F3D /* GoogleService-Info.plist */; };
+		FDD120B72825BFB600895F3D /* InAppMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD120B62825BFB600895F3D /* InAppMessageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FD6C1C87275EE2DE000FD5CF /* iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD6C1C8A275EE2DE000FD5CF /* iOS_ExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_ExampleApp.swift; sourceTree = "<group>"; };
-		FD6C1C8C275EE2DE000FD5CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FD6C1C8E275EE2E1000FD5CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD6C1C91275EE2E1000FD5CF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FDD120B22825BA1700895F3D /* InAppMessagingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppMessagingAppDelegate.swift; sourceTree = "<group>"; };
+		FDD120B42825BAC300895F3D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FDD120B62825BFB600895F3D /* InAppMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppMessageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +34,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD6C1C9A275EE466000FD5CF /* FirebaseAnalytics in Frameworks */,
+				FDD120AE2825B98500895F3D /* FirebaseInAppMessaging in Frameworks */,
+				FDD120B02825B99000895F3D /* FirebaseDynamicLinks in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,7 +63,8 @@
 			isa = PBXGroup;
 			children = (
 				FD6C1C8A275EE2DE000FD5CF /* iOS_ExampleApp.swift */,
-				FD6C1C8C275EE2DE000FD5CF /* ContentView.swift */,
+				FDD120B12825B9FC00895F3D /* In App Message */,
+				FDD120B42825BAC300895F3D /* GoogleService-Info.plist */,
 				FD6C1C8E275EE2E1000FD5CF /* Assets.xcassets */,
 				FD6C1C90275EE2E1000FD5CF /* Preview Content */,
 			);
@@ -77,6 +86,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FDD120B12825B9FC00895F3D /* In App Message */ = {
+			isa = PBXGroup;
+			children = (
+				FDD120B22825BA1700895F3D /* InAppMessagingAppDelegate.swift */,
+				FDD120B62825BFB600895F3D /* InAppMessageView.swift */,
+			);
+			path = "In App Message";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -87,6 +105,7 @@
 				FD6C1C83275EE2DE000FD5CF /* Sources */,
 				FD6C1C84275EE2DE000FD5CF /* Frameworks */,
 				FD6C1C85275EE2DE000FD5CF /* Resources */,
+				FDD120AC2825AF6400895F3D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -95,6 +114,8 @@
 			name = "iOS Example";
 			packageProductDependencies = (
 				FD6C1C99275EE466000FD5CF /* FirebaseAnalytics */,
+				FDD120AD2825B98500895F3D /* FirebaseInAppMessaging */,
+				FDD120AF2825B99000895F3D /* FirebaseDynamicLinks */,
 			);
 			productName = "iOS Example";
 			productReference = FD6C1C87275EE2DE000FD5CF /* iOS Example.app */;
@@ -140,18 +161,40 @@
 			files = (
 				FD6C1C92275EE2E1000FD5CF /* Preview Assets.xcassets in Resources */,
 				FD6C1C8F275EE2E1000FD5CF /* Assets.xcassets in Resources */,
+				FDD120B52825BAC300895F3D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FDD120AC2825AF6400895F3D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nsh \"${PROJECT_DIR}/../.scripts/resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FD6C1C83275EE2DE000FD5CF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD6C1C8D275EE2DE000FD5CF /* ContentView.swift in Sources */,
+				FDD120B72825BFB600895F3D /* InAppMessageView.swift in Sources */,
 				FD6C1C8B275EE2DE000FD5CF /* iOS_ExampleApp.swift in Sources */,
+				FDD120B32825BA1700895F3D /* InAppMessagingAppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +404,14 @@
 		FD6C1C99275EE466000FD5CF /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = FirebaseAnalytics;
+		};
+		FDD120AD2825B98500895F3D /* FirebaseInAppMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FirebaseInAppMessaging;
+		};
+		FDD120AF2825B99000895F3D /* FirebaseDynamicLinks */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FirebaseDynamicLinks;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
