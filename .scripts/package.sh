@@ -28,8 +28,8 @@ library_name () {
 }
 
 excludes () {
-    # Files other than xcframeworks and resources will not be included in the package
-    echo "$1" | grep -v -E ".xcframework|Resources"
+    # Files other than xcframeworks will not be included in the package
+    echo "$1" | grep -v -E ".xcframework"
 }
 
 trim_empty_lines () {
@@ -166,13 +166,17 @@ write_target () {
         \"$exclude\"" >> $output; comma=",";
         done; printf "\n      ]" >> $output;
     fi
+    
     # Resources are expected to be inside the $library/Resources folder
-    if [ -d "$library/Resources" ]; then
-        printf ",\n      resources: [" >> $output
-        comma=""; for i in "$library/Resources/*"; do printf "$comma
-        .process(\"Resources/$(resource_name $i)\")" >> $output; comma=","
-        done; printf "\n      ]" >> $output;
-    fi
+    # Note: disabling because these resources will not be in the main bundle
+    # https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/issues/23
+    # if [ -d "$library/Resources" ]; then
+    #    printf ",\n      resources: [" >> $output
+    #    comma=""; for i in "$library/Resources/*"; do printf "$comma
+    #    .process(\"Resources/$(resource_name $i)\")" >> $output; comma=","
+    #    done; printf "\n      ]" >> $output;
+    # fi
+    
     # Closing bracket
     printf "\n    )" >> $output
 }
@@ -314,7 +318,7 @@ if [[ $latest != $current || $debug ]]; then
     mv "$scratch/$package" "$package"
 
     # Skips deploy
-    if [[ $skip_release ]]; then exit 0; fi
+    if [[ $skip_release ]]; then echo "Done."; exit 0; fi
 
     # Deploy to repository
     echo "Merging changes to Github..."

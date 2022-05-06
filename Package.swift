@@ -89,7 +89,10 @@ let package = Package(
   targets: [
     .target(
       name: "Firebase",
-      publicHeadersPath: "./"
+      publicHeadersPath: "./",
+      linkerSettings: [
+          .unsafeFlags(["-ObjC"])
+      ]
     ),
     .target(
       name: "FirebaseABTestingTarget",
@@ -206,8 +209,8 @@ let package = Package(
         "leveldb-library"
       ],
       path: "Sources/FirebaseFirestore",
-      resources: [
-        .process("Resources/gRPCCertificates-Cpp.bundle")
+      exclude: [
+        "Resources"
       ]
     ),
     .target(
@@ -235,8 +238,8 @@ let package = Package(
         .target(name: "FirebaseInAppMessagingSwift", condition: .when(platforms: [.iOS]))
       ],
       path: "Sources/FirebaseInAppMessaging",
-      resources: [
-        .process("Resources/InAppMessagingDisplayResources.bundle")
+      exclude: [
+        "Resources"
       ]
     ),
     .target(
@@ -316,8 +319,8 @@ let package = Package(
         .target(name: "GoogleSignIn", condition: .when(platforms: [.iOS]))
       ],
       path: "Sources/GoogleSignIn",
-      resources: [
-        .process("Resources/GoogleSignIn.bundle")
+      exclude: [
+        "Resources"
       ]
     ),
     .binaryTarget(
