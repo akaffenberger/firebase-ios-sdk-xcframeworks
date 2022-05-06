@@ -20,10 +20,7 @@ let package = Package(
     name: "MyLibrary",
     platforms: [.iOS(.v11)],
     products: [
-        .library(
-            name: "MyLibrary",
-            targets: ["MyLibraryTarget"]
-        )
+        .library(name: "MyLibrary", targets: ["MyLibraryTarget"])
     ],
     dependencies: [
         .package(
@@ -44,7 +41,7 @@ let package = Package(
 )
 ```
 
-### Add Resource Bundles
+### Add resource bundles
 
 Some Firebase frameworks require resource bundles. To include those, there are two options:
 1. Use the provided script to automatically include all Firebase resources. Copy the following into a Run Script Phase:
@@ -63,3 +60,8 @@ The script performs the following actions:
 - Parses the Firebase.zip to generate Package.swift and Sources/
 - Commits changes on a new branch and creates a PR
 - Creates a draft release, with a tag that mirrors the Firebase release. The draft release includes the assets needed for the swift package
+
+## Run locally
+- Install github cli: `$ brew install gh`
+- Generate the swift package: `$ cd .scripts && sh package.sh debug skip-release`
+
