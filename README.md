@@ -44,6 +44,16 @@ let package = Package(
 )
 ```
 
+### Add Resource Bundles
+
+Some Firebase frameworks require resource bundles. To include those, there are two options:
+1. Use the provided script to automatically include all Firebase resources. Copy the following into a Run Script Phase:
+```
+sh "${BUILD_DIR%Build/*}SourcePackages/checkouts/firebase-ios-sdk-xcframeworks/.scripts/resources.sh"
+```
+2. Or, manually drag and drop the specific resource bundles you need from the package into your Copy Bundle Resources Phase:
+![](./assets/draganddrop.gif)
+
 # How it works
 
 The `Package.swift` and `Sources` files are automatically generated via a [script](https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/blob/master/.scripts/package.sh), which is set to run in a scheduled cron job via Github Actions. 
