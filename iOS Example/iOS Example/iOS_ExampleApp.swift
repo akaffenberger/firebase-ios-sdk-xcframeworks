@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct iOS_ExampleApp: App {
+    @UIApplicationDelegateAdaptor var delegate: InAppMessagingAppDelegate
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            InAppMessageView()
         }
     }
 }
