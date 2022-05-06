@@ -14,7 +14,10 @@ let package = Package(
   targets: [
     .target(
       name: "Firebase",
-      publicHeadersPath: "./"
+      publicHeadersPath: "./",
+      linkerSettings: [
+          .unsafeFlags(["-ObjC"])
+      ]
     ),
 // GENERATE TARGETS,
 // GENERATE BINARIES
