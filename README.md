@@ -61,7 +61,11 @@ The script performs the following actions:
 - Commits changes on a new branch and creates a PR
 - Creates a draft release, with a tag that mirrors the Firebase release. The draft release includes the assets needed for the swift package
 
-## Run locally
+## Running the script locally
 - Install github cli: `$ brew install gh`
 - Generate the swift package: `$ cd .scripts && sh package.sh debug skip-release`
+
+## Running the iOS Example
+- [Setup a firebase project](https://firebase.google.com/docs/ios/setup), and add your `GoogleService-Info.plist` to the project. Make sure the services you want to use are enabled (FirebaseAuth, Firestore, In App Messaging, etc.)
+- Open the iOS Example.xcworkspace, build and run the iOS Example target
 

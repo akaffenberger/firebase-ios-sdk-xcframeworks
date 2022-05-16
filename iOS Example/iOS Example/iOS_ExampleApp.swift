@@ -9,11 +9,26 @@ import SwiftUI
 
 @main
 struct iOS_ExampleApp: App {
-    @UIApplicationDelegateAdaptor var delegate: InAppMessagingAppDelegate
+    @UIApplicationDelegateAdaptor var delegate: AppDelegate
     
     var body: some Scene {
         WindowGroup {
-            InAppMessageView()
+            NavigationView {
+                List {
+                    NavigationLink("Firestore") {
+                        FirestoreView()
+                            .navigationTitle("Firestore")
+                    }
+                    
+                    NavigationLink("In App Messaging") {
+                        InAppMessageView()
+                            .navigationTitle("In App Messaging")
+                    }
+                }
+                .navigationBarHidden(true)
+                .navigationViewStyle(.stack)
+                .navigationBarTitleDisplayMode(.inline)
+            }
         }
     }
 }
