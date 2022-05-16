@@ -41,6 +41,10 @@ let package = Package(
 )
 ```
 
+### Add linker flags
+
+Add `-ObjC` to Build Settings -> Other Linker Flags
+
 ### Add resource bundles
 
 Some Firebase frameworks require resource bundles. To include those, there are two options:
