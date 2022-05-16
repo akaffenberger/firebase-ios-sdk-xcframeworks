@@ -11,9 +11,12 @@
 		FD6C1C8F275EE2E1000FD5CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD6C1C8E275EE2E1000FD5CF /* Assets.xcassets */; };
 		FD6C1C92275EE2E1000FD5CF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD6C1C91275EE2E1000FD5CF /* Preview Assets.xcassets */; };
 		FD6C1C9A275EE466000FD5CF /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FD6C1C99275EE466000FD5CF /* FirebaseAnalytics */; };
+		FDA7DAA02832D8DE0085D174 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7DA9F2832D8DE0085D174 /* AppDelegate.swift */; };
+		FDA7DAA22832D9750085D174 /* FirestoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7DAA12832D9750085D174 /* FirestoreView.swift */; };
+		FDA7DAA42832DD4B0085D174 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FDA7DAA32832DD4B0085D174 /* FirebaseFirestore */; };
+		FDA7DAA62832E1470085D174 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FDA7DAA52832E1470085D174 /* FirebaseAuth */; };
 		FDD120AE2825B98500895F3D /* FirebaseInAppMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = FDD120AD2825B98500895F3D /* FirebaseInAppMessaging */; };
 		FDD120B02825B99000895F3D /* FirebaseDynamicLinks in Frameworks */ = {isa = PBXBuildFile; productRef = FDD120AF2825B99000895F3D /* FirebaseDynamicLinks */; };
-		FDD120B32825BA1700895F3D /* InAppMessagingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD120B22825BA1700895F3D /* InAppMessagingAppDelegate.swift */; };
 		FDD120B52825BAC300895F3D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FDD120B42825BAC300895F3D /* GoogleService-Info.plist */; };
 		FDD120B72825BFB600895F3D /* InAppMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD120B62825BFB600895F3D /* InAppMessageView.swift */; };
 /* End PBXBuildFile section */
@@ -23,7 +26,8 @@
 		FD6C1C8A275EE2DE000FD5CF /* iOS_ExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_ExampleApp.swift; sourceTree = "<group>"; };
 		FD6C1C8E275EE2E1000FD5CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD6C1C91275EE2E1000FD5CF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		FDD120B22825BA1700895F3D /* InAppMessagingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppMessagingAppDelegate.swift; sourceTree = "<group>"; };
+		FDA7DA9F2832D8DE0085D174 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FDA7DAA12832D9750085D174 /* FirestoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreView.swift; sourceTree = "<group>"; };
 		FDD120B42825BAC300895F3D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FDD120B62825BFB600895F3D /* InAppMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppMessageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -34,6 +38,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD6C1C9A275EE466000FD5CF /* FirebaseAnalytics in Frameworks */,
+				FDA7DAA62832E1470085D174 /* FirebaseAuth in Frameworks */,
+				FDA7DAA42832DD4B0085D174 /* FirebaseFirestore in Frameworks */,
 				FDD120AE2825B98500895F3D /* FirebaseInAppMessaging in Frameworks */,
 				FDD120B02825B99000895F3D /* FirebaseDynamicLinks in Frameworks */,
 			);
@@ -63,7 +69,8 @@
 			isa = PBXGroup;
 			children = (
 				FD6C1C8A275EE2DE000FD5CF /* iOS_ExampleApp.swift */,
-				FDD120B12825B9FC00895F3D /* In App Message */,
+				FDA7DA9F2832D8DE0085D174 /* AppDelegate.swift */,
+				FDD120B12825B9FC00895F3D /* Views */,
 				FDD120B42825BAC300895F3D /* GoogleService-Info.plist */,
 				FD6C1C8E275EE2E1000FD5CF /* Assets.xcassets */,
 				FD6C1C90275EE2E1000FD5CF /* Preview Content */,
@@ -86,13 +93,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FDD120B12825B9FC00895F3D /* In App Message */ = {
+		FDD120B12825B9FC00895F3D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FDD120B22825BA1700895F3D /* InAppMessagingAppDelegate.swift */,
+				FDA7DAA12832D9750085D174 /* FirestoreView.swift */,
 				FDD120B62825BFB600895F3D /* InAppMessageView.swift */,
 			);
-			path = "In App Message";
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -116,6 +123,8 @@
 				FD6C1C99275EE466000FD5CF /* FirebaseAnalytics */,
 				FDD120AD2825B98500895F3D /* FirebaseInAppMessaging */,
 				FDD120AF2825B99000895F3D /* FirebaseDynamicLinks */,
+				FDA7DAA32832DD4B0085D174 /* FirebaseFirestore */,
+				FDA7DAA52832E1470085D174 /* FirebaseAuth */,
 			);
 			productName = "iOS Example";
 			productReference = FD6C1C87275EE2DE000FD5CF /* iOS Example.app */;
@@ -192,9 +201,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDA7DAA22832D9750085D174 /* FirestoreView.swift in Sources */,
+				FDA7DAA02832D8DE0085D174 /* AppDelegate.swift in Sources */,
 				FDD120B72825BFB600895F3D /* InAppMessageView.swift in Sources */,
 				FD6C1C8B275EE2DE000FD5CF /* iOS_ExampleApp.swift in Sources */,
-				FDD120B32825BA1700895F3D /* InAppMessagingAppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +416,14 @@
 		FD6C1C99275EE466000FD5CF /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = FirebaseAnalytics;
+		};
+		FDA7DAA32832DD4B0085D174 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FirebaseFirestore;
+		};
+		FDA7DAA52832E1470085D174 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FirebaseAuth;
 		};
 		FDD120AD2825B98500895F3D /* FirebaseInAppMessaging */ = {
 			isa = XCSwiftPackageProductDependency;

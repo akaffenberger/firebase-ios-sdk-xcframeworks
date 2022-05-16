@@ -1,8 +1,8 @@
 //
-//  InAppMessagingAppDelegate.swift
+//  AppDelegate.swift
 //  iOS Example
 //
-//  Created by Ashleigh Kaffenberger on 5/6/22.
+//  Created by Ashleigh Kaffenberger on 5/16/22.
 //
 
 import Foundation
@@ -10,7 +10,7 @@ import Firebase
 import FirebaseInAppMessaging
 import FirebaseDynamicLinks
 
-class InAppMessagingAppDelegate: NSObject, UIApplicationDelegate {
+class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         FirebaseOptions.defaultOptions()?.deepLinkURLScheme = "example"
         FirebaseApp.configure()

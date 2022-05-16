@@ -11,16 +11,10 @@ import Firebase
 struct InAppMessageView: View {
     var body: some View {
         VStack(alignment: .center) {
-            VStack(spacing: 0) {
-                Text("In App Message")
-                Text("(limited to once per day)")
-            }
-            .padding()
-        
             Button("Trigger In App Message") {
                 Analytics.logEvent("in_app_message", parameters: nil)
             }
-            .padding()
+            Text("(limited to once per day)")
         }
     }
 }
