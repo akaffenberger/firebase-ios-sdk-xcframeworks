@@ -245,7 +245,7 @@ let package = Package(
         "Firebase",
         "FirebaseAnalyticsTarget",
         "FirebaseMLModelDownloader",
-        "SwiftProtobuf"
+        "_SwiftProtobuf"
       ],
       path: "Sources/FirebaseMLModelDownloader"
     ),
@@ -546,9 +546,9 @@ let package = Package(
       checksum: "56f02f2d8ae8f8e72f4487c2211becb7a7aaa3f24b8b40a1eb5e20992141fa47"
     ),
     .binaryTarget(
-      name: "SwiftProtobuf",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/9.0.0/SwiftProtobuf.xcframework.zip",
-      checksum: "ee81b74d8193a38fbe6cef72f0e698c4a8437ad43d898afae3c3c885c5cfcc4b"
+      name: "_SwiftProtobuf",
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/9.0.0/_SwiftProtobuf.xcframework.zip",
+      checksum: "ccc7ceaad5bf52d007b4d9f82d856b81eaa95fad223b8b0b35bc60d2c3480c47"
     ),
     .binaryTarget(
       name: "UserMessagingPlatform",
