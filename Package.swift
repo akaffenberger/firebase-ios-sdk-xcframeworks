@@ -85,6 +85,7 @@ let package = Package(
     )
   ],
   dependencies: [
+    .package(name: "AppAuth", url: "https://github.com/openid/AppAuth-iOS.git", .upToNextMajor(from: "1.5.0")),
   ],
   targets: [
     .target(
@@ -310,7 +311,7 @@ let package = Package(
       dependencies: [
         "Firebase",
         "FirebaseAnalyticsTarget",
-        .target(name: "AppAuth", condition: .when(platforms: [.iOS])),
+        .byName(name: "AppAuth", condition: .when(platforms: [.iOS])),
         .target(name: "GTMAppAuth", condition: .when(platforms: [.iOS])),
         "GTMSessionFetcher",
         .target(name: "GoogleSignIn", condition: .when(platforms: [.iOS]))
@@ -319,11 +320,6 @@ let package = Package(
       exclude: [
         "Resources"
       ]
-    ),
-    .binaryTarget(
-      name: "AppAuth",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/9.0.0/AppAuth.xcframework.zip",
-      checksum: "4e94abed2707a28ccc97c411c13c3c9cabab452371ea88004c98377be8f45e3c"
     ),
     .binaryTarget(
       name: "BoringSSL-GRPC",
