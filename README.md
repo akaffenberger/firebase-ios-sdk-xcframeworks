@@ -66,6 +66,7 @@ The script performs the following actions:
 - Generate the swift package: `$ cd .scripts && sh package.sh debug skip-release`
 
 ## Running the iOS Example
-- [Setup a firebase project](https://firebase.google.com/docs/ios/setup), and add your `GoogleService-Info.plist` to the project. Make sure the services you want to use are enabled (FirebaseAuth, Firestore, In App Messaging, etc.)
+- [Setup a firebase project](https://firebase.google.com/docs/ios/setup). Make sure the services you want to test are enabled (FirebaseAuth, Firestore, In App Messaging, etc.)
+- Download and add your `GoogleService-Info.plist` to the iOS Example project.
 - Open the iOS Example.xcworkspace, build and run the iOS Example target
 

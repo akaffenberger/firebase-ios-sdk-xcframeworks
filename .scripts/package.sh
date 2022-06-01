@@ -53,6 +53,15 @@ create_scratch () {
     trap "if [[ \$debug ]]; then read -p \"\"; fi; rm -rf \"$scratch\"" EXIT
 }
 
+rename_frameworks () {
+    local prefix="$1"
+    for i in */*.xcframework; do (
+        local name=$(xcframework_name $i)
+        cd "$i/../"; mv "$name.xcframework" "$prefix$name.xcframework"
+    ) & done;
+    wait
+}
+
 zip_frameworks () {
     for i in */*.xcframework; do (
         local name=$(xcframework_name $i)
@@ -293,6 +302,7 @@ if [[ $latest != $current || $debug ]]; then
         unzip -q Firebase.zip
         echo "Preparing xcframeworks for distribution..."
         cd Firebase
+        rename_frameworks "_"
         zip_frameworks
         echo "Creating distribution files..."
         prepare_files_for_distribution "../$distribution"
