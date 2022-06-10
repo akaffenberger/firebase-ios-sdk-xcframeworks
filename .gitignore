@@ -48,8 +48,3 @@ dist/
 .DS_Store
 *.orig
 iOS Example/iOS Example.xcworkspace/xcuserdata/
-
-# Firebase Example
-iOS Example/iOS Example/GoogleService-Info.plist
-iOS Example/GoogleService-Info.plist
-GoogleService-Info.plist
