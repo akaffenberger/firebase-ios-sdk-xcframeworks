@@ -14,7 +14,7 @@ Any and all input is welcome, including:
 4. Create the pull request.
 
 ## Issues
-Report a bug by [opening a new issue](https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/issues). Include steps to reproduce the error (and if possible sample code is always appreciated).
+Report a bug by [opening a new issue](https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/issues). Include steps to reproduce the error (and if possible sample code is always appreciated). To help with reproducing and testing issues there is an example project included in this repo: https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/tree/master/iOS%20Example
 
 ## License
 By contributing, you agree that your contributions will be licensed under the project's [MIT License](http://choosealicense.com/licenses/mit/).
