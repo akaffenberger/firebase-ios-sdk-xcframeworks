@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD0E088C285377F000C61C95 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0E088B285377F000C61C95 /* SignInView.swift */; };
+		FD0E08902853800C00C61C95 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = FD0E088F2853800C00C61C95 /* GoogleSignIn */; };
 		FD6C1C8B275EE2DE000FD5CF /* iOS_ExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6C1C8A275EE2DE000FD5CF /* iOS_ExampleApp.swift */; };
 		FD6C1C8F275EE2E1000FD5CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD6C1C8E275EE2E1000FD5CF /* Assets.xcassets */; };
 		FD6C1C92275EE2E1000FD5CF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD6C1C91275EE2E1000FD5CF /* Preview Assets.xcassets */; };
@@ -22,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FD0E088B285377F000C61C95 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		FD6C1C87275EE2DE000FD5CF /* iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD6C1C8A275EE2DE000FD5CF /* iOS_ExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_ExampleApp.swift; sourceTree = "<group>"; };
 		FD6C1C8E275EE2E1000FD5CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,6 +45,7 @@
 				FDA7DAA42832DD4B0085D174 /* FirebaseFirestore in Frameworks */,
 				FDD120AE2825B98500895F3D /* FirebaseInAppMessaging in Frameworks */,
 				FDD120B02825B99000895F3D /* FirebaseDynamicLinks in Frameworks */,
+				FD0E08902853800C00C61C95 /* GoogleSignIn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +102,7 @@
 			children = (
 				FDA7DAA12832D9750085D174 /* FirestoreView.swift */,
 				FDD120B62825BFB600895F3D /* InAppMessageView.swift */,
+				FD0E088B285377F000C61C95 /* SignInView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 				FDD120AF2825B99000895F3D /* FirebaseDynamicLinks */,
 				FDA7DAA32832DD4B0085D174 /* FirebaseFirestore */,
 				FDA7DAA52832E1470085D174 /* FirebaseAuth */,
+				FD0E088F2853800C00C61C95 /* GoogleSignIn */,
 			);
 			productName = "iOS Example";
 			productReference = FD6C1C87275EE2DE000FD5CF /* iOS Example.app */;
@@ -201,6 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD0E088C285377F000C61C95 /* SignInView.swift in Sources */,
 				FDA7DAA22832D9750085D174 /* FirestoreView.swift in Sources */,
 				FDA7DAA02832D8DE0085D174 /* AppDelegate.swift in Sources */,
 				FDD120B72825BFB600895F3D /* InAppMessageView.swift in Sources */,
@@ -413,6 +420,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		FD0E088F2853800C00C61C95 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = GoogleSignIn;
+		};
 		FD6C1C99275EE466000FD5CF /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = FirebaseAnalytics;

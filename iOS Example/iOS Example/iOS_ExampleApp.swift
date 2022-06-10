@@ -24,6 +24,11 @@ struct iOS_ExampleApp: App {
                         InAppMessageView()
                             .navigationTitle("In App Messaging")
                     }
+                    
+                    NavigationLink("Google Sign In") {
+                        SignInView()
+                            .navigationTitle("Google Sign In")
+                    }
                 }
                 .navigationBarHidden(true)
                 .navigationViewStyle(.stack)
