@@ -2,7 +2,7 @@
 
 A small mirror for https://github.com/firebase/firebase-ios-sdk, to add support for using their binary dependencies (xcframeworks) with swift package manager. 
 
-This repo contains a [Package.swift](https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/blob/master/Package.swift) file, which uses a `binaryTarget` for all Firebase libraries (xcframework files are hosted in github [releases](https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases)). 
+This repo contains a [Package.swift](https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/blob/main/Package.swift) file, which uses a `binaryTarget` for all Firebase libraries (xcframework files are hosted in github [releases](https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases)). 
 
 ## Official SPM Support
 
@@ -25,7 +25,7 @@ Firebase currently supports SPM integration, see the [official SDK integration i
         dependencies: [
             .package(
                 name: "Firebase",
-                url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks.git",
+                url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks.git",
                 .exact("8.10.0")
             ),
         ],
@@ -53,7 +53,7 @@ Firebase currently supports SPM integration, see the [official SDK integration i
 
 # How it works
 
-The `Package.swift` and `Sources` files are automatically generated via a [script](https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/blob/master/.scripts/package.sh), which is set to run in a scheduled cron job via Github Actions. 
+The `Package.swift` and `Sources` files are automatically generated via a [script](https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/blob/main/.scripts/package.sh), which is set to run in a scheduled cron job via Github Actions. 
 
 The script performs the following actions:
 - Downloads the latest release from https://github.com/firebase/firebase-ios-sdk
