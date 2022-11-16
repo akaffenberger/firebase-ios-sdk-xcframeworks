@@ -326,253 +326,253 @@ let package = Package(
     ),
     .binaryTarget(
       name: "_AppAuth",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_AppAuth.xcframework.zip",
-      checksum: "5b5982e5e8a5450199ea29c8ea371739e6a903ce085616b05a65d2406629b892"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_AppAuth.xcframework.zip",
+      checksum: "2cf5859caa3376be6f9153833915a234a17c847ae2981d1e2efb2524fd0b55c2"
     ),
     .binaryTarget(
       name: "_BoringSSL-GRPC",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_BoringSSL-GRPC.xcframework.zip",
-      checksum: "5afa1cb6cb0c17aee03b96b2b49ba4fa51ef7a915a07f4a1a942d1c9f58da221"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_BoringSSL-GRPC.xcframework.zip",
+      checksum: "b6173a63cd593e43f94fad92fc8e6114b00decde76071c5424dec52c72dcd2aa"
     ),
     .binaryTarget(
       name: "_FBLPromises",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_FBLPromises.xcframework.zip",
-      checksum: "9eeb94adef5c55ae473a3800770e9686e04d779d7d779dc4160cb21d60f81180"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_FBLPromises.xcframework.zip",
+      checksum: "069227cad5dc080a7124c423bb0afc02197222c17b5928ab6bf737200d6b6bdd"
     ),
     .binaryTarget(
       name: "_FirebaseABTesting",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_FirebaseABTesting.xcframework.zip",
-      checksum: "0f998a53a6a2e8bd1e5c3fe3d7957851030056c90c37a849fa49acd989c196d6"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_FirebaseABTesting.xcframework.zip",
+      checksum: "858b51bd82a8bc7946afe64e5f423d1238db57f9e1d62a51fccb31c4931d56d1"
     ),
     .binaryTarget(
       name: "_FirebaseAnalytics",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_FirebaseAnalytics.xcframework.zip",
-      checksum: "7687f10e3bdc0054ef9dc42826617aab572a086052d4eb9d3f8cba88290cbf32"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_FirebaseAnalytics.xcframework.zip",
+      checksum: "ac68613cf9f7caf27be41d4ca2e568c175e0ff3724b2b6ff839b459e24f6197a"
     ),
     .binaryTarget(
       name: "_FirebaseAnalyticsOnDeviceConversion",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_FirebaseAnalyticsOnDeviceConversion.xcframework.zip",
-      checksum: "658937011475ef507593e69dd1c4928febdbc034fbc1b3f2e5ee2f3933ddcf45"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_FirebaseAnalyticsOnDeviceConversion.xcframework.zip",
+      checksum: "ab4ddc8dd4167143bdacabbd071b20c22e5e7a2ae7e644d1d3d9d44c132e1f85"
     ),
     .binaryTarget(
       name: "_FirebaseAnalyticsSwift",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_FirebaseAnalyticsSwift.xcframework.zip",
-      checksum: "0d9146d3f3d9b32453d586b75ea5620e69bcd62e98fc5f5accf12ce21ce9d494"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_FirebaseAnalyticsSwift.xcframework.zip",
+      checksum: "3aa64f435b8f65be791b8eb7b085bc0b2920a6db77324c2100e44db2238088bb"
     ),
     .binaryTarget(
       name: "_FirebaseAppCheck",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_FirebaseAppCheck.xcframework.zip",
-      checksum: "06d141f45791d91d8670379f03afe3bc3b0aff832bbea11f289f5dc291902ba8"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_FirebaseAppCheck.xcframework.zip",
+      checksum: "49a989552c3a719daf0a5b37ff44c8917db26db3df8b38b41ae9d28739221d6e"
     ),
     .binaryTarget(
       name: "_FirebaseAppCheckInterop",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_FirebaseAppCheckInterop.xcframework.zip",
-      checksum: "6d5f3207a7926d501cd0be11f56e5324ed3619bc4a904198cd454470d90451f6"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_FirebaseAppCheckInterop.xcframework.zip",
+      checksum: "abbadf85c77cbf38fd03def1ab064d57bdcc2ac1c1b21e0da3ba468e9ac24449"
     ),
     .binaryTarget(
       name: "_FirebaseAppDistribution",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_FirebaseAppDistribution.xcframework.zip",
-      checksum: "3f72edb948157e4158d0a6682026209fd555eac8fad00c5492f50e07e18fdbbb"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_FirebaseAppDistribution.xcframework.zip",
+      checksum: "dc43f038f0fb38668d3ba23c1592dc7248c1404ca30732856ad782ea53d41838"
     ),
     .binaryTarget(
       name: "_FirebaseAuth",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_FirebaseAuth.xcframework.zip",
-      checksum: "0e0a7ebe598f327cf4737f95893a927e38d2c6455e2f6298e33ab3430107f350"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_FirebaseAuth.xcframework.zip",
+      checksum: "80e4a51b5a9ff3240a1392295465f07e38bde8006518913fb43fafe49c35abff"
     ),
     .binaryTarget(
       name: "_FirebaseAuthInterop",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_FirebaseAuthInterop.xcframework.zip",
-      checksum: "f10f3fad7f4a8fde35e90a29597af6801a28f6448893617b21102ddcd702db73"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_FirebaseAuthInterop.xcframework.zip",
+      checksum: "e00b24eabdf3ffd42a08c5b5c1b88c61d0eaddedde648d262842aeeb837c1a61"
     ),
     .binaryTarget(
       name: "_FirebaseCore",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_FirebaseCore.xcframework.zip",
-      checksum: "0f2f35003d3075f0155f3c5951334e4baf26c002f5c21f0443ebba5bf295a8c0"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_FirebaseCore.xcframework.zip",
+      checksum: "96c731f6e1b920621a23083446b6b633802e6cb8e0f87f40580013b2632fa111"
     ),
     .binaryTarget(
       name: "_FirebaseCoreExtension",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_FirebaseCoreExtension.xcframework.zip",
-      checksum: "a9073d98f1a1f1bdf350f13a9670f363588657014a84e206a4b1d2ffcbe289da"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_FirebaseCoreExtension.xcframework.zip",
+      checksum: "f743a669ce2dc70be8c44e648ddf666bacf89c0b1ed118ee272cc746689642eb"
     ),
     .binaryTarget(
       name: "_FirebaseCoreInternal",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_FirebaseCoreInternal.xcframework.zip",
-      checksum: "36c65ed09336d05171c9ac2f57218a8afbd1ee4546c05102e30cdfd13fcf5d27"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_FirebaseCoreInternal.xcframework.zip",
+      checksum: "0b021bd715698864f9f9db2376dbfcfb377a69bf34f505ef1520a62c697531ab"
     ),
     .binaryTarget(
       name: "_FirebaseCrashlytics",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_FirebaseCrashlytics.xcframework.zip",
-      checksum: "3d6dfc78887e47ce73c9a17a8d356c5d6619fa4b7f5381c4f75af693795c3268"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_FirebaseCrashlytics.xcframework.zip",
+      checksum: "409b9e22b360a2e8d7ea5fda715932f702817076ec8a4fedbd189571fb313702"
     ),
     .binaryTarget(
       name: "_FirebaseDatabase",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_FirebaseDatabase.xcframework.zip",
-      checksum: "b9b2119b2d32828c0b7630f30403d89fde93d8dfe37fd8bbd8d210b13c26f3df"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_FirebaseDatabase.xcframework.zip",
+      checksum: "2113855b8160fa388e1471bdc318b689d12989bc774794e24188c24a723dccf6"
     ),
     .binaryTarget(
       name: "_FirebaseDatabaseSwift",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_FirebaseDatabaseSwift.xcframework.zip",
-      checksum: "76bea117d20eeedb8b9a41ffe24f7ef028f1bc7f57a4ad7bcdc37256b1772a65"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_FirebaseDatabaseSwift.xcframework.zip",
+      checksum: "65e1b4f937f368b0268893d1be9f2b39ecb802dd9cd567329a1d2735ab8bb663"
     ),
     .binaryTarget(
       name: "_FirebaseDynamicLinks",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_FirebaseDynamicLinks.xcframework.zip",
-      checksum: "b99e37636e5490cae5bda57901363fec4be792ca7255756a51e51e13110ad91c"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_FirebaseDynamicLinks.xcframework.zip",
+      checksum: "63decc210895033d053ec0a33acff22a9cac5324c7bf40dce7b56be26df25a09"
     ),
     .binaryTarget(
       name: "_FirebaseFirestore",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_FirebaseFirestore.xcframework.zip",
-      checksum: "53b1994a664557c52b7d6aa30d93c01d2a367546ada69fa3371dc98fb082c756"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_FirebaseFirestore.xcframework.zip",
+      checksum: "8ef2f32a4574e5762d1aaf07c5daa610f5e7b9bd57fc4245bb1b6263f0f4cae0"
     ),
     .binaryTarget(
       name: "_FirebaseFirestoreSwift",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_FirebaseFirestoreSwift.xcframework.zip",
-      checksum: "e5ffdb95b0836aa0560b517b59fd53966f92e2f7784290dc60be3ad3520252c1"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_FirebaseFirestoreSwift.xcframework.zip",
+      checksum: "a74997e94e1ece6d5b0ce479c737badaea0cb8273b9a02937ef91ef617a137e8"
     ),
     .binaryTarget(
       name: "_FirebaseFunctions",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_FirebaseFunctions.xcframework.zip",
-      checksum: "ee3ea803459f47c8b854ec675d1ec3dd35c390d1d748b33de4be37112e80495c"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_FirebaseFunctions.xcframework.zip",
+      checksum: "979a18edbc76a3b3e1533ba9d29d637606b83d7d43369026636adf9ea1b07226"
     ),
     .binaryTarget(
       name: "_FirebaseInAppMessaging",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_FirebaseInAppMessaging.xcframework.zip",
-      checksum: "0effc5682c637978ec05a36042a5533492fe8cece83b6f177ade58ead551f38a"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_FirebaseInAppMessaging.xcframework.zip",
+      checksum: "af287c14f4bae8bac19e53e81102c43b59a649aa71035697c583166c88bf9ab5"
     ),
     .binaryTarget(
       name: "_FirebaseInAppMessagingSwift",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_FirebaseInAppMessagingSwift.xcframework.zip",
-      checksum: "5076f5104e46c376173a240f0f4fb4a37285a85322ce9f3d6d2b0bf0f4d59221"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_FirebaseInAppMessagingSwift.xcframework.zip",
+      checksum: "03d53321e62bd488717b227fd2494bd41266f822ea6f2eea54edd0f3c077d13e"
     ),
     .binaryTarget(
       name: "_FirebaseInstallations",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_FirebaseInstallations.xcframework.zip",
-      checksum: "848abb6f1f78fce6fd6e9d668429c616cb461df3890adbbbdde4449b57374e1c"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_FirebaseInstallations.xcframework.zip",
+      checksum: "9921a60d0ca27015f4b7fb6343057edb7c5baa5506a3436f8fb873580322da01"
     ),
     .binaryTarget(
       name: "_FirebaseMLModelDownloader",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_FirebaseMLModelDownloader.xcframework.zip",
-      checksum: "c64a1beb8d57292a9cc2e0bed4973732ba9b76af16608e8cca15a9f5b69338b5"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_FirebaseMLModelDownloader.xcframework.zip",
+      checksum: "a6b7dd9e9caa86ad959667543dce733d10a319d61e673f92b945bc66084e9eb0"
     ),
     .binaryTarget(
       name: "_FirebaseMessaging",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_FirebaseMessaging.xcframework.zip",
-      checksum: "7a6bc7f9bda8d35ef9021efbc3a5104f166d43cbc6aec935015f7ec62bc490ba"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_FirebaseMessaging.xcframework.zip",
+      checksum: "e972bce31e3b553da1ff349046c46a416592be1ba85769aa7e86b5e92b7e772d"
     ),
     .binaryTarget(
       name: "_FirebaseMessagingInterop",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_FirebaseMessagingInterop.xcframework.zip",
-      checksum: "b15be2c7e585d2a6fcd499400555f59f25702d0d8f159828371ff8608ddccc59"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_FirebaseMessagingInterop.xcframework.zip",
+      checksum: "f09e53bf600e0b22cabeab9412e4494b6e86c3b3809c6dee4672188a09e40b59"
     ),
     .binaryTarget(
       name: "_FirebasePerformance",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_FirebasePerformance.xcframework.zip",
-      checksum: "fa7ed9f7f9cb9b246967c26bfdffc4807b57f5ed1446d95e962a54a7b8f3fbbd"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_FirebasePerformance.xcframework.zip",
+      checksum: "9cc1a6c4f301014e26113de167a1ee303793fec57bb91a2b672b8dd5b377f9df"
     ),
     .binaryTarget(
       name: "_FirebaseRemoteConfig",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_FirebaseRemoteConfig.xcframework.zip",
-      checksum: "954518217b7eb467962dc6c210cf6ab929f614874387a112d29d9a5f054c1efb"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_FirebaseRemoteConfig.xcframework.zip",
+      checksum: "06292a3ed3d1878e7005211ad30b85c1424a2a0ddd697621494a4fc8ff5eda73"
     ),
     .binaryTarget(
       name: "_FirebaseRemoteConfigSwift",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_FirebaseRemoteConfigSwift.xcframework.zip",
-      checksum: "ea50c2a1c26b53d50a7a883270afbc1dca5ed8bf920282285b73d193a7bb9799"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_FirebaseRemoteConfigSwift.xcframework.zip",
+      checksum: "3f40252a9f85c7a84d768e9c7648155c4f40689e87c38f0bbc8aedd51d1227c8"
     ),
     .binaryTarget(
       name: "_FirebaseSharedSwift",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_FirebaseSharedSwift.xcframework.zip",
-      checksum: "73ef71377dfd5fcdd95320c0f9e8e72d3874c4c74898e260f4140bdedda3a92c"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_FirebaseSharedSwift.xcframework.zip",
+      checksum: "ddd34ff390f610c58f5db987ad4f79dfc6630d4300df9757531cb55908a0b79e"
     ),
     .binaryTarget(
       name: "_FirebaseStorage",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_FirebaseStorage.xcframework.zip",
-      checksum: "e93ced1d1c978c02c9bbc7236074678adf21e1f39d12ea1909b4cdd2bf66a9d6"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_FirebaseStorage.xcframework.zip",
+      checksum: "7d821c40a34e44aadf80553861ffee15a540bf88728fb7451c7fca1d96d8b88e"
     ),
     .binaryTarget(
       name: "_GTMAppAuth",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_GTMAppAuth.xcframework.zip",
-      checksum: "ff29afc3f9071999fafbf580266c24d74cae9bc6f7e42229689353895b095034"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_GTMAppAuth.xcframework.zip",
+      checksum: "7486b60d40f0993154fad61190c8b5fffb56919b47f032d42420cbcaf30aa3d4"
     ),
     .binaryTarget(
       name: "_GTMSessionFetcher",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_GTMSessionFetcher.xcframework.zip",
-      checksum: "74e19bdf2a7a4df1089c38dc3b053f31e392509145d7d274d0954a8629710d75"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_GTMSessionFetcher.xcframework.zip",
+      checksum: "f3097471b7a89ecce3038775b3bd81fb9c368db41ec25948571ed2fd91e536c9"
     ),
     .binaryTarget(
       name: "_GoogleAppMeasurement",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_GoogleAppMeasurement.xcframework.zip",
-      checksum: "66f40dbe47395c8eccbd3801cfbeab50fadf6421c1dd9fba6c1f74ce12d62cb3"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_GoogleAppMeasurement.xcframework.zip",
+      checksum: "efd4e1878e78f273055a4ce1e5b60c96a22faada51fed7929629f2c2c96c19c4"
     ),
     .binaryTarget(
       name: "_GoogleAppMeasurementIdentitySupport",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_GoogleAppMeasurementIdentitySupport.xcframework.zip",
-      checksum: "76586d324a788a4ee6e5d19186cc99fc3109ca74ab7928a15e511f725cc62795"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_GoogleAppMeasurementIdentitySupport.xcframework.zip",
+      checksum: "7f7546fb59c6a65e1c1fbffdcca7328a46c39077127b4a68872f485912f0879a"
     ),
     .binaryTarget(
       name: "_GoogleAppMeasurementOnDeviceConversion",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_GoogleAppMeasurementOnDeviceConversion.xcframework.zip",
-      checksum: "2a812d57782534384b379286430efcfb9fe7da142a6cdbdaa07d8efb0fe580ef"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_GoogleAppMeasurementOnDeviceConversion.xcframework.zip",
+      checksum: "f37a14278eae799d17b35f9311a3fc8c3b2e7531489127413ebba88245bc171e"
     ),
     .binaryTarget(
       name: "_GoogleDataTransport",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_GoogleDataTransport.xcframework.zip",
-      checksum: "46d17805bb2dc3783169cafefcbb86dc0bb636f2f98a5e1164495f5011a43f2b"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_GoogleDataTransport.xcframework.zip",
+      checksum: "1287288fa22c33f834c0e4f4fcc5b2c31b9045d5f8e0251fc607cd26b692cebb"
     ),
     .binaryTarget(
       name: "_GoogleMobileAds",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_GoogleMobileAds.xcframework.zip",
-      checksum: "005e42a34d3c16dc23cf7d6260b4e44837d94c8113aa646debe1a407ce5a132d"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_GoogleMobileAds.xcframework.zip",
+      checksum: "20317a1a283f2f6deba6eb92e39abb1e337d318277cc362dceefcc0260570202"
     ),
     .binaryTarget(
       name: "_GoogleSignIn",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_GoogleSignIn.xcframework.zip",
-      checksum: "04b9077b21decd71b535d08aa766673c61312ba7fba4ee8d98ce4233e1222f0d"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_GoogleSignIn.xcframework.zip",
+      checksum: "ec5166688537731f09daaeafc05afb5fe275d983a17a0de11e4e8985f83f546d"
     ),
     .binaryTarget(
       name: "_GoogleUtilities",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_GoogleUtilities.xcframework.zip",
-      checksum: "2ede4b862b95955d8480970bc9c32d01b393c8db25fdca2b1343ab203cea5bc6"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_GoogleUtilities.xcframework.zip",
+      checksum: "429eec5b4d81fc35c2d2c6c1323934392dbc2f03e22e8b50901b89540ddd5b5c"
     ),
     .binaryTarget(
       name: "_Libuv-gRPC",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_Libuv-gRPC.xcframework.zip",
-      checksum: "78c2b74d55af9afe99fc93ff2dce4e2f385078a7bba31a53c6048d9fc4db80bf"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_Libuv-gRPC.xcframework.zip",
+      checksum: "94c228e1de9152b71394cb55dc85909b81f56904f602b844db9380b9409e94ba"
     ),
     .binaryTarget(
       name: "_SwiftProtobuf",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_SwiftProtobuf.xcframework.zip",
-      checksum: "ca5af3e451d7d00ea51ffa298aefc137aa438386b64ec54fb4f5294e7a2e30a2"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_SwiftProtobuf.xcframework.zip",
+      checksum: "7355fc59be1027e31d3d9e9010483ab003b4c2f4446e8c8b1c7ed5df514d817a"
     ),
     .binaryTarget(
       name: "_UserMessagingPlatform",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_UserMessagingPlatform.xcframework.zip",
-      checksum: "89553945e1ccef79a59a5cd3a47d290b23a0bd12c68fa2da79b11ed038262c2f"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_UserMessagingPlatform.xcframework.zip",
+      checksum: "f23cfa180a0be03343a9005a3b212c2f851e10e1d3f6e1ca3ff758d614a6d59e"
     ),
     .binaryTarget(
       name: "_abseil",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_abseil.xcframework.zip",
-      checksum: "ff46684827ab2b7f1726a5baee1f30e5e23abd6c80c6197458f1a4808b0ba852"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_abseil.xcframework.zip",
+      checksum: "aeea1b58839fcbb0aeb419045285a8338609698442ad3846d85e03aaec7f97be"
     ),
     .binaryTarget(
       name: "_gRPC-C++",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_gRPC-C++.xcframework.zip",
-      checksum: "0e388c3257f4f08930a5e14172a76245e52e8dc8d1c5307f52c18caec2d30485"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_gRPC-C++.xcframework.zip",
+      checksum: "0cd32d2857a64e3b878a9d8cb1efea37b3d0978762bb9221984ada5310fda15a"
     ),
     .binaryTarget(
       name: "_gRPC-Core",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_gRPC-Core.xcframework.zip",
-      checksum: "3326d314374436d2f280282c4a5253c49bbe6b25ee213279330a69412a042b03"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_gRPC-Core.xcframework.zip",
+      checksum: "d431ecf54ae3f2b1e6f337b2b5413aaaa253e0b8be80a9c412f90f4ec6e39731"
     ),
     .binaryTarget(
       name: "_leveldb-library",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_leveldb-library.xcframework.zip",
-      checksum: "0698fb8ef229b1206ad31f866221ac93cc93132018912499febb740c774abcc1"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_leveldb-library.xcframework.zip",
+      checksum: "2142b6e3cf07a28cf5f9128c6a7bf2925899157864ccab004582f28fd5d3b876"
     ),
     .binaryTarget(
       name: "_nanopb",
-      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.1.0/_nanopb.xcframework.zip",
-      checksum: "78a808502b46e99bd8ff41af2b8b2944b5ee40dc6508aa513779c86bae428268"
+      url: "https://github.com/afresh-technologies/firebase-ios-sdk-xcframeworks/releases/download/10.2.0/_nanopb.xcframework.zip",
+      checksum: "4546ea52a3d115593f46bb9f5584288815799b713685a7bceb86a364cbc60146"
     )
   ]
 )
