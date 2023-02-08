@@ -43,24 +43,5 @@ Firebase currently supports SPM integration, see the [official SDK integration i
 
 - Add `-ObjC` to Build Settings -> Other Linker Flags
 - Some Firebase frameworks require resource bundles. To include those, there are two options:
-  
-  Use the provided script to automatically include all Firebase resources. Copy the following into a Run Script Phase:
-  ```
-  sh "${BUILD_DIR%Build/*}SourcePackages/checkouts/firebase-ios-sdk-xcframeworks/.scripts/resources.sh"
-  ```
-  Or, manually drag and drop specific resource bundles into your target's Copy Bundle Resources Phase:
+  Drag and drop specific resource bundles into your target's Copy Bundle Resources Phase:
   ![](./assets/draganddrop.gif)
-
-# How it works
-
-The `Package.swift` and `Sources` files are automatically generated via a [script](https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/blob/master/.scripts/package.sh), which is set to run in a scheduled cron job via Github Actions. 
-
-The script performs the following actions:
-- Downloads the latest release from https://github.com/firebase/firebase-ios-sdk
-- Parses the Firebase.zip to generate Package.swift and Sources/
-- Commits changes on a new branch and creates a PR
-- Creates a draft release, with a tag that mirrors the Firebase release. The draft release includes the assets needed for the swift package
-
-## Running the script locally
-- Install github cli: `$ brew install gh`
-- Generate the swift package: `$ cd .scripts && sh package.sh debug skip-release`
