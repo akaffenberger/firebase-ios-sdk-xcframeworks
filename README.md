@@ -42,6 +42,6 @@ Firebase currently supports SPM integration, see the [official SDK integration i
     ```
 
 - Add `-ObjC` to Build Settings -> Other Linker Flags
-- Some Firebase frameworks require resource bundles. To include those, there are two options:
-  Drag and drop specific resource bundles into your target's Copy Bundle Resources Phase:
+- Some Firebase frameworks require resource bundles. Drag and drop the ones you need into your target's Copy Bundle Resources Phase:
+
   ![](./assets/draganddrop.gif)
