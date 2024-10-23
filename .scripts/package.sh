@@ -287,6 +287,8 @@ if [[ $latest != $current || $debug ]]; then
         gh release download --pattern 'Firebase.zip' --repo $firebase_repo
         echo "Unzipping.."
         unzip -q Firebase.zip
+        echo -n "Enter to continue [ENTER]: "
+        read enter
         echo "Preparing xcframeworks for distribution..."
         cd Firebase
         zip_frameworks
