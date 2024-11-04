@@ -280,7 +280,6 @@ xcframeworks_repo="https://github.com/akaffenberger/firebase-ios-sdk-xcframework
 # Release versions
 latest=$(latest_release_number $firebase_repo)
 current=$(latest_release_number $xcframeworks_repo)
-latest_folder_name=${latest//./_} # replace . with _
 
 # Args
 debug=$(echo $@ || "" | grep debug)
@@ -302,8 +301,6 @@ if [[ $latest != $current || $debug ]]; then
         gh release download --pattern 'Firebase.zip' --repo $firebase_repo
         echo "Unzipping.."
         unzip -q Firebase.zip
-        cd "$latest_folder_name"
-        unzip -q "Firebase-$latest-latest.zip"
         echo "Preparing xcframeworks for distribution..."
         cd Firebase
         rename_frameworks "_"
@@ -328,8 +325,8 @@ if [[ $latest != $current || $debug ]]; then
     if [ -d $sources ]; then rm -rf "$sources"; fi
     if [ -f $package ]; then rm -f "$package"; fi
     # Move generated files into the repo directory
-    mv "$scratch/$latest_folder_name/$sources" "$sources"
-    mv "$scratch/$latest_folder_name/$package" "$package"
+    mv "$scratch/$sources" "$sources"
+    mv "$scratch/$package" "$package"
 
     # Skips deploy
     if [[ $skip_release ]]; then echo "Done."; exit 0; fi
@@ -338,7 +335,7 @@ if [[ $latest != $current || $debug ]]; then
     echo "Merging changes to Github..."
     commit_changes "release/$latest"
     echo "Creating release draft"
-    echo "Release $latest" | gh release create --target "release/$latest" --draft $latest $scratch/$latest_folder_name/dist/*.xcframework.zip
+    echo "Release $latest" | gh release create --target "release/$latest" --draft $latest $scratch/dist/*.xcframework.zip
 else
     echo "$current is up to date."
 fi
