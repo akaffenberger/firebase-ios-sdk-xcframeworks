@@ -331,253 +331,253 @@ let package = Package(
     ),
     .binaryTarget(
       name: "_AppAuth",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_AppAuth.xcframework.zip",
-      checksum: "ba32b6ae2651fb338775a1ae5e8ca3edbcb9f819e8006ff0a06de02d478abf41"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_AppAuth.xcframework.zip",
+      checksum: "219565061443ef98361a67ffb5d367004137be98b3576a19c25f40a7b83c6f74"
     ),
     .binaryTarget(
       name: "_AppCheckCore",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_AppCheckCore.xcframework.zip",
-      checksum: "2a8d5de6f52ebd23dbedac5ebc0cc7b6719473c28470d6c9c17987728b01f1c8"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_AppCheckCore.xcframework.zip",
+      checksum: "7a0d83f6702958ff00da9ae40b33c58b2ae77b25fe321d66c2a86af9727838b7"
     ),
     .binaryTarget(
       name: "_FBLPromises",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_FBLPromises.xcframework.zip",
-      checksum: "1b52f7d8d8dca44b4e2bbe34094921b8c877518ca32f9ab4ef1242057d6e42c2"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_FBLPromises.xcframework.zip",
+      checksum: "423a61196ac0aabc07f326b84ee45c8b8f0d7c76099dbd122b01e990484a38b4"
     ),
     .binaryTarget(
       name: "_FirebaseABTesting",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_FirebaseABTesting.xcframework.zip",
-      checksum: "1b1092558e1753ad9383f0dc5d4d6a78d786e5a8c83326722f56ab26af2cf149"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_FirebaseABTesting.xcframework.zip",
+      checksum: "54c217fe9d7c33f78f023172b0ac912528c2d0decc9cf39a2303c28072f5d867"
     ),
     .binaryTarget(
       name: "_FirebaseAnalytics",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_FirebaseAnalytics.xcframework.zip",
-      checksum: "f324ad1ddeabdfa754b14173384e41676be788f795ce56f62464f1cd8845474b"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_FirebaseAnalytics.xcframework.zip",
+      checksum: "53bb90bc90d5802391d37e3621bb99982dc547cfc41ac5f342766e1f04233528"
     ),
     .binaryTarget(
       name: "_FirebaseAnalyticsOnDeviceConversion",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_FirebaseAnalyticsOnDeviceConversion.xcframework.zip",
-      checksum: "f6b5759c08820a2e2f75c85e1e99095eacfdbfe2fb92bf6760348f8d5236d372"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_FirebaseAnalyticsOnDeviceConversion.xcframework.zip",
+      checksum: "1715ce7bb9c806047a5b7710ffb55374ecc1c26323b18f147b703db87d96226e"
     ),
     .binaryTarget(
       name: "_FirebaseAppCheck",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_FirebaseAppCheck.xcframework.zip",
-      checksum: "028fc358f11de9eb1dfe3fea463e1f0c45a39aa7e5ab4601bf075faa8a2a4d95"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_FirebaseAppCheck.xcframework.zip",
+      checksum: "86a6acfabad4a78bbf7525b4aa9174f3fff68a310c16a881690bd52d5892acd6"
     ),
     .binaryTarget(
       name: "_FirebaseAppCheckInterop",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_FirebaseAppCheckInterop.xcframework.zip",
-      checksum: "0b51d988459cca5f2102bf6b8ba32f6a38fa7ab626d9bf85f44a6faf9b691268"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_FirebaseAppCheckInterop.xcframework.zip",
+      checksum: "7df7c42fca10ff10571ea3087f47a0f19ae4daf98348782aa72f4cb95ff18746"
     ),
     .binaryTarget(
       name: "_FirebaseAppDistribution",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_FirebaseAppDistribution.xcframework.zip",
-      checksum: "c862936d4657e9aed51f78880ce472cbde6cd327cc5063aa2c3483d644983593"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_FirebaseAppDistribution.xcframework.zip",
+      checksum: "4f85d6bfa994b265660786bf9ceb3d23fe1f41761ab6c52e861cb430cc960ca7"
     ),
     .binaryTarget(
       name: "_FirebaseAuth",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_FirebaseAuth.xcframework.zip",
-      checksum: "0d25f516ada9036bcaacf1338d2a174dccc8ff15b99235a465035fa33c4b848f"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_FirebaseAuth.xcframework.zip",
+      checksum: "b555b7598c51c90b7bcac1086ab30e4b53443cfb4f34b00fb9485dcc10991129"
     ),
     .binaryTarget(
       name: "_FirebaseAuthInterop",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_FirebaseAuthInterop.xcframework.zip",
-      checksum: "0d76d797217b7bb2428b542a7d5abfde97b8f20209576146d6d1a356a285e170"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_FirebaseAuthInterop.xcframework.zip",
+      checksum: "5346d587c2872b80a6017b26099adeb38ce6fac2fc1f9906e1cfd4fd483bbd78"
     ),
     .binaryTarget(
       name: "_FirebaseCore",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_FirebaseCore.xcframework.zip",
-      checksum: "1d49775314064abd9b7b457c432fb68d78810b1815f13aa405cec999c78e83ce"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_FirebaseCore.xcframework.zip",
+      checksum: "88df5e3ed24a08df7425a9420fa4ba20845e4f98b0226544cc310b157e0bd37a"
     ),
     .binaryTarget(
       name: "_FirebaseCoreExtension",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_FirebaseCoreExtension.xcframework.zip",
-      checksum: "335ab45ca7134c4303ddb2093e6e337ad3d6f988f7bffdbb26fd896b4e7b2d47"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_FirebaseCoreExtension.xcframework.zip",
+      checksum: "99f5133176dd296bbeb87806815f34f7fb42e9b64624f26799eb79f51ccd5370"
     ),
     .binaryTarget(
       name: "_FirebaseCoreInternal",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_FirebaseCoreInternal.xcframework.zip",
-      checksum: "01717340f54fb691402b5c517a2833cb3ed8c480d1ad7e91cc62be8402b63b03"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_FirebaseCoreInternal.xcframework.zip",
+      checksum: "8f0fbc6e3b4a09ac679bf0986429aa1df413030928a6d75e94edfc6b8ce310cb"
     ),
     .binaryTarget(
       name: "_FirebaseCrashlytics",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_FirebaseCrashlytics.xcframework.zip",
-      checksum: "8b27c2e2d4072204f3da03d4e1ed912826183fd01614c7161c87a165bdbfbc0a"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_FirebaseCrashlytics.xcframework.zip",
+      checksum: "82b25ae48140ea4ca0d967f90f528c1c300e0e38c98a963a56dab31e3edfbec4"
     ),
     .binaryTarget(
       name: "_FirebaseDatabase",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_FirebaseDatabase.xcframework.zip",
-      checksum: "3694c150dcb6a9ee597f2789be3a58cfee2c9ba221a1a9a0b8c20f8bd3cac290"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_FirebaseDatabase.xcframework.zip",
+      checksum: "a20b4cb884ec1a4936b64c80726ad4493ce78dc83c597acc44032ff13d46589a"
     ),
     .binaryTarget(
       name: "_FirebaseDynamicLinks",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_FirebaseDynamicLinks.xcframework.zip",
-      checksum: "ea1aaf6b57baf50bc566348e3f27490abce7c8013cb9452e74727af3f4718a91"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_FirebaseDynamicLinks.xcframework.zip",
+      checksum: "7fd22f463b793656eb30e37bd727130f2f4367b4317a2cfff01d206a85ee3e8f"
     ),
     .binaryTarget(
       name: "_FirebaseFirestore",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_FirebaseFirestore.xcframework.zip",
-      checksum: "00a3d5519e00abafc50ce6de42fc3ddef9da816d08417850a8d7e3184413b344"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_FirebaseFirestore.xcframework.zip",
+      checksum: "ceab5d51b6385ac628b095b092acb56cb2e2462b93313c9a3b7b492878e93071"
     ),
     .binaryTarget(
       name: "_FirebaseFirestoreInternal",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_FirebaseFirestoreInternal.xcframework.zip",
-      checksum: "efeefaed46cb765c6cee79ad82e95c0f87470eb040c544369c06b734f818ede4"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_FirebaseFirestoreInternal.xcframework.zip",
+      checksum: "33619e2f9170b1f92c5771d48ca07ce85b9cb7d7d324da131acd3850226a2387"
     ),
     .binaryTarget(
       name: "_FirebaseFunctions",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_FirebaseFunctions.xcframework.zip",
-      checksum: "e9a4558786d64ae48a7777164f9457d57cb30917e7cb986998fd4832517c01a1"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_FirebaseFunctions.xcframework.zip",
+      checksum: "a2c6c73b0a8f438b40f62a555e93aaa4ef35837be4111c795f020ab856c9244f"
     ),
     .binaryTarget(
       name: "_FirebaseInAppMessaging",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_FirebaseInAppMessaging.xcframework.zip",
-      checksum: "cc8f002cce8132e4f89226a67bfda97ecfdcae42e0439ffa59f476feb0390b4d"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_FirebaseInAppMessaging.xcframework.zip",
+      checksum: "5ed66bb3824accb7388f8f8a29d3b2e78293e6bb6ba7e673b257abd9ac3506b5"
     ),
     .binaryTarget(
       name: "_FirebaseInstallations",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_FirebaseInstallations.xcframework.zip",
-      checksum: "9e7af60ea7bb541d251516ae1c7f0fe5151e8066ed5f6595828f1f4d6f352e24"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_FirebaseInstallations.xcframework.zip",
+      checksum: "2b25a9feff474eb6883dffccb925f827629305c7d1d458a8966845fc7dfc6be1"
     ),
     .binaryTarget(
       name: "_FirebaseMLModelDownloader",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_FirebaseMLModelDownloader.xcframework.zip",
-      checksum: "eea463cd9e23b2dcf5e038843756c3ec468e439aba64271d9f3a0b74aa21cb32"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_FirebaseMLModelDownloader.xcframework.zip",
+      checksum: "8ffd32ee2b715d31d4c8ad23a4c54280fb216328b268ae88fd52ef966c713931"
     ),
     .binaryTarget(
       name: "_FirebaseMessaging",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_FirebaseMessaging.xcframework.zip",
-      checksum: "ab16b923ede29766a7e4accae70cc8a7719cd7d34dc2df18117e52b89b7cfbde"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_FirebaseMessaging.xcframework.zip",
+      checksum: "025acdc74fc9cc9d15b472514d7171d2622634ab7e3a872a9ad6f3ebb02619f2"
     ),
     .binaryTarget(
       name: "_FirebaseMessagingInterop",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_FirebaseMessagingInterop.xcframework.zip",
-      checksum: "63953a2855bb7a835b3c1a1594b684ad80d94bea8053b72af2a31f592cd14800"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_FirebaseMessagingInterop.xcframework.zip",
+      checksum: "fd2747c5f2d0c7e37ab59cb7cbc3c3456b7c7c7cb31ccafe84aece1c60930a23"
     ),
     .binaryTarget(
       name: "_FirebasePerformance",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_FirebasePerformance.xcframework.zip",
-      checksum: "ad85bba92214676c7443c661f7f51ceeb1133f35601b4712ae7733943e13b866"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_FirebasePerformance.xcframework.zip",
+      checksum: "7e78473b8d94728f6a912a618c977adacdea2c6aceca436b367d17d0852277a4"
     ),
     .binaryTarget(
       name: "_FirebaseRemoteConfig",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_FirebaseRemoteConfig.xcframework.zip",
-      checksum: "e273eeed48953ed9895913a0d61f150f9bf5cafe4f81157ce1c9efecf022d2d3"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_FirebaseRemoteConfig.xcframework.zip",
+      checksum: "9699175d521728abd595c96991ebee5e3bb962a56719f39f49a78da98127a00c"
     ),
     .binaryTarget(
       name: "_FirebaseRemoteConfigInterop",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_FirebaseRemoteConfigInterop.xcframework.zip",
-      checksum: "acbb317fadff361cafe29dd4a1968146bbd0c9d1f973f6ca61a561256d960e13"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_FirebaseRemoteConfigInterop.xcframework.zip",
+      checksum: "50ca2e8e8ec0c0ace3cab2b66e37d9bd63c9abfa2eb90994f6d188e4a70b1610"
     ),
     .binaryTarget(
       name: "_FirebaseSessions",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_FirebaseSessions.xcframework.zip",
-      checksum: "74e18dfec508029ea0a9f0fa3279b2cc8b1294833eaefd96d0ba83ddfa33002c"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_FirebaseSessions.xcframework.zip",
+      checksum: "6e0d6e0c645c40041d5c087d169cffc483efb9ec4c98c431e871598674bed77c"
     ),
     .binaryTarget(
       name: "_FirebaseSharedSwift",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_FirebaseSharedSwift.xcframework.zip",
-      checksum: "9a2be76ec60191ed601d2ef55799125866a2820dd8d2b543441703d67aa12bc5"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_FirebaseSharedSwift.xcframework.zip",
+      checksum: "29e334e461d47ea1c60bbf5971f8d01efa8d6d83db1c3354ab3edb416d7b0e67"
     ),
     .binaryTarget(
       name: "_FirebaseStorage",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_FirebaseStorage.xcframework.zip",
-      checksum: "175725daa0ba0381196ea37c9c65d8c6541902585ae5827b925d1a97623a07e5"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_FirebaseStorage.xcframework.zip",
+      checksum: "a985c912fc1b56fcbf7d536f2c4b2dfd77574dd9b4f54b07f380e57322472908"
     ),
     .binaryTarget(
       name: "_GTMAppAuth",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_GTMAppAuth.xcframework.zip",
-      checksum: "e93cf81e869c28f7cc1a64e1752381b9212baca5b0c5a00b18f8f9366243978b"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_GTMAppAuth.xcframework.zip",
+      checksum: "a81f8979a80bae95b4201826ba3f03d15beef9bd977bc314d450d8c9cc51b073"
     ),
     .binaryTarget(
       name: "_GTMSessionFetcher",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_GTMSessionFetcher.xcframework.zip",
-      checksum: "b810c9c5b17df341060d4af35fa20a2d8ae6c8317e74b9fdd37fb7723ff3ceea"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_GTMSessionFetcher.xcframework.zip",
+      checksum: "995ce8534212502680a3f19bb84a00f6e98eb7a22643d65f7e264866fdcd53f2"
     ),
     .binaryTarget(
       name: "_GoogleAppMeasurement",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_GoogleAppMeasurement.xcframework.zip",
-      checksum: "102a2acb67bed8a24e53d8017fbb2880467b8c974d1b691b5188ea083f7c0e51"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_GoogleAppMeasurement.xcframework.zip",
+      checksum: "0ecbdc448d83d26c494aea44b9229117c6288fee8d25c73304c255e79398a4ef"
     ),
     .binaryTarget(
       name: "_GoogleAppMeasurementIdentitySupport",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_GoogleAppMeasurementIdentitySupport.xcframework.zip",
-      checksum: "bccc2c9c93a71118cf4a8707b2f67cc141036e0c06cb3631470eb5e771b109fb"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_GoogleAppMeasurementIdentitySupport.xcframework.zip",
+      checksum: "5e4934eccf2c8099ae0d9c05729ed2b3c1e2a698cc9dd58c2bec4d17b6e75d6c"
     ),
     .binaryTarget(
       name: "_GoogleAppMeasurementOnDeviceConversion",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_GoogleAppMeasurementOnDeviceConversion.xcframework.zip",
-      checksum: "7260fb8f3a8ac583a4a0de6dc0c82b14ce93875d88b69c1dd85cc6af93d6d138"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_GoogleAppMeasurementOnDeviceConversion.xcframework.zip",
+      checksum: "85efdc50573de5bd0daee4c6335862ccf1b9c1b8309c07000610cadef1de48fa"
     ),
     .binaryTarget(
       name: "_GoogleDataTransport",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_GoogleDataTransport.xcframework.zip",
-      checksum: "833000f0d7cfa56bc1a635f1debf6262c74489bab7c1d8462468cde7f840945d"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_GoogleDataTransport.xcframework.zip",
+      checksum: "5d27518d6b9b783977974ae29ee0e742047d87ecd27b514041b8650e96664ec7"
     ),
     .binaryTarget(
       name: "_GoogleMobileAds",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_GoogleMobileAds.xcframework.zip",
-      checksum: "4fc46e76d4ec62e4e57c5454b86d31b3c70eb1449b2922f65948a267466ee007"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_GoogleMobileAds.xcframework.zip",
+      checksum: "409b27fd5a5b27d7e1d603d78ecc0d4f0b9ac061a4d4bbafcff224d6bc9f373e"
     ),
     .binaryTarget(
       name: "_GoogleSignIn",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_GoogleSignIn.xcframework.zip",
-      checksum: "bc7d30e369f8c139ec144558d6359a84cc712730ee802f30745b85867950c37e"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_GoogleSignIn.xcframework.zip",
+      checksum: "4cb5ef1a08def49c95df6b0d2cc49ac22ad85de88451875be39131327fb1adb7"
     ),
     .binaryTarget(
       name: "_GoogleUtilities",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_GoogleUtilities.xcframework.zip",
-      checksum: "5f47a37693b8ff561c213f6278cf13d8ecb132e8010171e45bdcb3d2b21c89ae"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_GoogleUtilities.xcframework.zip",
+      checksum: "d07ba349cb061459c96aa5de0c0d73bc2a2e4c6a2657b4d9288f8e65b9dece01"
     ),
     .binaryTarget(
       name: "_Promises",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_Promises.xcframework.zip",
-      checksum: "4b54b6764f7c249661cf5ee0100113feb3e2344a2e6191da9c6ab91fde825fd4"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_Promises.xcframework.zip",
+      checksum: "bad62dc42ec3c7b4890c680143a53ce1a9503cb504afd3cf0b8e8fb743406086"
     ),
     .binaryTarget(
       name: "_RecaptchaInterop",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_RecaptchaInterop.xcframework.zip",
-      checksum: "39fd26ba9adf2770cc6e6c925ad215cee7f96da2ab2f3873fb1f18f4fbaa570c"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_RecaptchaInterop.xcframework.zip",
+      checksum: "b63835fdf8aea90291a5ba51ce0c60b68cc988e5d7c5eb80f23496f659bae1a9"
     ),
     .binaryTarget(
       name: "_SwiftProtobuf",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_SwiftProtobuf.xcframework.zip",
-      checksum: "eabfa6b2e28ea88e070fc72eba9966babdb4f20677619fe43737244b0f575fa8"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_SwiftProtobuf.xcframework.zip",
+      checksum: "5cf1d59b3d25f435a9702dfcdfb91d08f092753eca17cf30a6be90ade124997f"
     ),
     .binaryTarget(
       name: "_UserMessagingPlatform",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_UserMessagingPlatform.xcframework.zip",
-      checksum: "7c91a107aa24f4acd8a6b5dfcd06843a378411dc16b70bbc17e8b5092ed7f66e"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_UserMessagingPlatform.xcframework.zip",
+      checksum: "f7225b2b458795265ba12e681626b535d7a0f740a9b51e9833c64f1c8831566c"
     ),
     .binaryTarget(
       name: "_absl",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_absl.xcframework.zip",
-      checksum: "fef66b7a76c99428d030305ea9327d1f648d63618c39a2ec9b7fdca116e25095"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_absl.xcframework.zip",
+      checksum: "c80ce52fbb02bb336f6e73e39f56052a4ba0f2fce36fd483129d78f96cb446c7"
     ),
     .binaryTarget(
       name: "_grpc",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_grpc.xcframework.zip",
-      checksum: "3021d3890d11599957c53eeffac8b554327bca8871fedb6c73eaae43b92bc0e3"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_grpc.xcframework.zip",
+      checksum: "e91a21142914f3320208b465bdd5aff61d592d02e6061ecf932c8c9649ed232d"
     ),
     .binaryTarget(
       name: "_grpcpp",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_grpcpp.xcframework.zip",
-      checksum: "18ffa64a2220c25399977850253636c8968a839b2808292c6971c2e13f2d1cd0"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_grpcpp.xcframework.zip",
+      checksum: "98c44a3a1dee2de98fcf8fe99220734c078d64854c3583b3a05eb8672ff4a264"
     ),
     .binaryTarget(
       name: "_leveldb",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_leveldb.xcframework.zip",
-      checksum: "4e0dcae12e047cc390f2185b39879a8cdda1cd5d1af9ad91b56034949d262023"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_leveldb.xcframework.zip",
+      checksum: "380f1b3e738718fbfb58300d9257b3fc8fdbf10b414bb04ebe2e6b19a5251ef8"
     ),
     .binaryTarget(
       name: "_nanopb",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_nanopb.xcframework.zip",
-      checksum: "f876ba86e68bc6eb4a622fc1833eee9ba6124d41a15406bec8887c5ef149bccd"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_nanopb.xcframework.zip",
+      checksum: "302f809e1a509cc18d3a76c5e5e2fd5559fd29f677bcf5516f99a9a81c2a7534"
     ),
     .binaryTarget(
       name: "_openssl_grpc",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.3.0/_openssl_grpc.xcframework.zip",
-      checksum: "1a1223ccd9b44f117eba962c7bd6e7c890ebab2400822983a5ba50f3167aec41"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.4.0/_openssl_grpc.xcframework.zip",
+      checksum: "ab55a4f41336ab5ff2e7b26a4879fca50466bab1ecf43e9c444ef9e54734e39d"
     )
   ]
 )
