@@ -348,182 +348,182 @@ let package = Package(
     .binaryTarget(
       name: "_AppAuth",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_AppAuth.xcframework.zip",
-      checksum: "2af9a381008ca39f677eb00f6ce41e4e6a02dd2c0a87b42ae0f4f67f94b76c39"
+      checksum: "237ee64365d092b735ee4733892940394e3ed534f07bb6db30639f553c7aa9e8"
     ),
     .binaryTarget(
       name: "_AppCheckCore",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_AppCheckCore.xcframework.zip",
-      checksum: "ba985270ad2631686bf52184e7aa4b447d33cacab72e268d9fdc15803f06e354"
+      checksum: "77dde05abbf88a3f5724ca35239a13ea0eab3705dad355ad42efc8a302266290"
     ),
     .binaryTarget(
       name: "_FBLPromises",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_FBLPromises.xcframework.zip",
-      checksum: "81fbba5fe9c5ae4497506d8f003a5ed4540a220b204822d44de3c9d959c8290a"
+      checksum: "255082a6ec5333969add59bad7fc50f380fa8d275767d10c3cb14498c413ebf3"
     ),
     .binaryTarget(
       name: "_FirebaseABTesting",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_FirebaseABTesting.xcframework.zip",
-      checksum: "b1cad9b951ecf53055ee83bf4783c3d0492df7ab76a4382dea1e47bb20899cdb"
+      checksum: "6ff271d7ababe8d6298cc2b0e2842e05fad2aeb6aa5c3d67be0d17f5aa44d55b"
     ),
     .binaryTarget(
       name: "_FirebaseAnalytics",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_FirebaseAnalytics.xcframework.zip",
-      checksum: "c65bef97dbc1e9e7178826e79025e31bbda65b65c889ba77f6596f374b9f2eed"
+      checksum: "4491960ae0bc6dd5e64106af192a72c32f3ca2a2b5e337512aad62012f209802"
     ),
     .binaryTarget(
       name: "_FirebaseAnalyticsOnDeviceConversion",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_FirebaseAnalyticsOnDeviceConversion.xcframework.zip",
-      checksum: "265230ae0fd5f7762a51a2e24496269df25a414451ee2e52caee014cfc0e1a5e"
+      checksum: "b1ce0952ecfdbc0c854f7237e47ca5b3fd6e54474d150553128fc30d0a409068"
     ),
     .binaryTarget(
       name: "_FirebaseAppCheck",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_FirebaseAppCheck.xcframework.zip",
-      checksum: "b11cf676e7c3d83b1529e1c4d16b423db91dbd529a5ff7f3f9795570b4cf12c7"
+      checksum: "8898bcb46e36110cf3e65adb17a0396e9ef6fde25baac84b1254b603c7ddfc8b"
     ),
     .binaryTarget(
       name: "_FirebaseAppCheckInterop",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_FirebaseAppCheckInterop.xcframework.zip",
-      checksum: "1b75f71cee32613cd085d3745602a9580964c28f14440deac8aae1520f86a6f8"
+      checksum: "e9ff8e2009872c6f0aa3894f9a37cb3745b4ee7476f5e038b465e7735a0e9d03"
     ),
     .binaryTarget(
       name: "_FirebaseAppDistribution",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_FirebaseAppDistribution.xcframework.zip",
-      checksum: "039a292d5b86840b3256554e1f1dd0c1c8cb1d8db922132f35e5cdd7f8ccf2a4"
+      checksum: "203ab8c1797fca58ad34c7e3874a6e1acad3611a4ed0b442c56b6e1064d45748"
     ),
     .binaryTarget(
       name: "_FirebaseAuth",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_FirebaseAuth.xcframework.zip",
-      checksum: "39be1c6ae046651e4ee8dc8094e0e605344be55d2407618f011d2a4d00ce6839"
+      checksum: "4eea4222669fa2ec24ee7c80ada84008a0fa6144cc2cbf7ac510fce038e80ad9"
     ),
     .binaryTarget(
       name: "_FirebaseAuthInterop",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_FirebaseAuthInterop.xcframework.zip",
-      checksum: "7a80b34dd89e624b24a8077f20fd4549b720c16969e033e4dad5947c82a53a99"
+      checksum: "465e782a5c2fe1374eb57b321783cfa19d7f370aa776978e56ad116f946aba5f"
     ),
     .binaryTarget(
       name: "_FirebaseCore",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_FirebaseCore.xcframework.zip",
-      checksum: "c888f05a722536c8e3ce7a3d54165ecc1a039292a54b5d43965c8540789f4358"
+      checksum: "e40b93e10bb872e9664d9b18f34c3a15bc55bd5d82e3d13de0c64eb8cafbfef0"
     ),
     .binaryTarget(
       name: "_FirebaseCoreExtension",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_FirebaseCoreExtension.xcframework.zip",
-      checksum: "13f326aaeb2fef70b297ebb72d614ade80291f5420d059518c9d414025709801"
+      checksum: "bd714bc479ca30eb1a0281413701f511a6e4489f9313bb9c26b17c1d54cf524e"
     ),
     .binaryTarget(
       name: "_FirebaseCoreInternal",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_FirebaseCoreInternal.xcframework.zip",
-      checksum: "6b31d3a814fa279865a284d106623376f6a1935e3f6f4f772dfe28a4d7f3b5e8"
+      checksum: "64fe95eaefa95ec4bd41346d9e25aad6be36f586e2b8b24029e306d637a0d37f"
     ),
     .binaryTarget(
       name: "_FirebaseCrashlytics",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_FirebaseCrashlytics.xcframework.zip",
-      checksum: "e316204f03286cdceb8a0e7c0c8d667b916f8acf61c028647448c0060cf62c8f"
+      checksum: "6e57815f311fb6bb2b19fa267fee2e5aca68737e76043757d145d2fc7514c0af"
     ),
     .binaryTarget(
       name: "_FirebaseDatabase",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_FirebaseDatabase.xcframework.zip",
-      checksum: "c46b6b4bc5a16cc0d55828e6259f1fc82f3613716f2386cc57db22f77082b672"
+      checksum: "6de6650d5f9deaddc53f43c466c71fd8f88eb548ac2d5526b616845aa7234044"
     ),
     .binaryTarget(
       name: "_FirebaseDynamicLinks",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_FirebaseDynamicLinks.xcframework.zip",
-      checksum: "1202dcf16115ca4b077fe30aef728b42499e6e101ae87541e83bc8d0eabd4b8c"
+      checksum: "582a93fdc76a131825324f617b33a2d2d8693d71c3bbf8e556ca4ffcec3a5828"
     ),
     .binaryTarget(
       name: "_FirebaseFirestore",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_FirebaseFirestore.xcframework.zip",
-      checksum: "bd7222e2ab41627bfa9b012d8c1f4d5720e420df831108b7c85cfe753541a0b5"
+      checksum: "17f25e67fcd51d17aff9e59d20b3751d7f04f6b3f488198a73d1426cf1bdc18d"
     ),
     .binaryTarget(
       name: "_FirebaseFirestoreInternal",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_FirebaseFirestoreInternal.xcframework.zip",
-      checksum: "1e945dd96e247166c16207dcd69b0c9cc49d8b9839607786e1af6ee579ae4c26"
+      checksum: "2ca9a12e54fc19eab0879cc1b3e287823e6f14ef097bf1c4ef89b4a7ea9c5f17"
     ),
     .binaryTarget(
       name: "_FirebaseFunctions",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_FirebaseFunctions.xcframework.zip",
-      checksum: "9772ed96db7aefa39a5f301f3fd0bfc887de91d3b61d49319de23287d6a22248"
+      checksum: "2f0f0b35c0da32413f658972e165bba08c748846e16af3b7bbfb2f31c8af9f0e"
     ),
     .binaryTarget(
       name: "_FirebaseInAppMessaging",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_FirebaseInAppMessaging.xcframework.zip",
-      checksum: "c4e004690221bc3cfdbf9b5f986f826776c52f3d93a8d3d1b7a05ba509756b7a"
+      checksum: "cd71d515fba703f8b928a5e60862a51125922ce0b953d81a45f8d870e5399479"
     ),
     .binaryTarget(
       name: "_FirebaseInstallations",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_FirebaseInstallations.xcframework.zip",
-      checksum: "ebba1db65d4b2b0df61b01dab0466a661f699a4027d2be87b9c2ee7dd5a441c0"
+      checksum: "28b04eb3d1dbe4707d32b2078574acc10ef12b5cba2ac26ba0555bacce4c68a6"
     ),
     .binaryTarget(
       name: "_FirebaseMLModelDownloader",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_FirebaseMLModelDownloader.xcframework.zip",
-      checksum: "f9951ac9d98ae4b15ab017404a75bfe0de8a65614bef9dcc312bd4f6381a9326"
+      checksum: "1f87ff1e4d16fd531d0c0224dee0367d1787688d99c3e7f51e60323bcabdb9b3"
     ),
     .binaryTarget(
       name: "_FirebaseMessaging",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_FirebaseMessaging.xcframework.zip",
-      checksum: "addff09f1d6eb0a88efac5e74ad9373fe32299adcabfc669afa15fe88d38dd78"
+      checksum: "61290562715262fbff6152e9745d9071bc358947c5d7c4612afe2310d9662962"
     ),
     .binaryTarget(
       name: "_FirebaseMessagingInterop",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_FirebaseMessagingInterop.xcframework.zip",
-      checksum: "ed252b0fdb62029606722c69ed6faf513263dfa38f4d6200d0daab9a5ad6fbf5"
+      checksum: "ddc0e76ebedbb77019b8f0845237234b29fce4349afa6b5ac19a60d474eabb56"
     ),
     .binaryTarget(
       name: "_FirebasePerformance",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_FirebasePerformance.xcframework.zip",
-      checksum: "ad877c0c92e55e7dd700dbbb51182b093471194b062dcb1328625c23abbc5722"
+      checksum: "715685475e386d86bc9feb7f22d99bf2902cf9cf7b8741cde2b317cdd63cd336"
     ),
     .binaryTarget(
       name: "_FirebaseRemoteConfig",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_FirebaseRemoteConfig.xcframework.zip",
-      checksum: "c6ad5efa2866cf6348459443f69d925d8180d26a5223b9668e6409a94a06f84f"
+      checksum: "738bc55690fdf3ad5c84093fad52487a3e6404cec91b654f58c3378f91474c7a"
     ),
     .binaryTarget(
       name: "_FirebaseRemoteConfigInterop",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_FirebaseRemoteConfigInterop.xcframework.zip",
-      checksum: "29c94d393c92327479149b057f1cf528217cdf1062b9afe2e462f34ca87d48f0"
+      checksum: "8d4debed65b80e396f71733f86c2b7568f3db11bd94135ad7ccfcf9d8711d0fa"
     ),
     .binaryTarget(
       name: "_FirebaseSessions",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_FirebaseSessions.xcframework.zip",
-      checksum: "ab01befc7ddb49fc953dc76e1284794b23171c5a58de0b0a973ba512268c0804"
+      checksum: "f3f01f0e3d837d71c47b88a4cc667d8024dc1a7b38978153fb7b7dbd862f7a43"
     ),
     .binaryTarget(
       name: "_FirebaseSharedSwift",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_FirebaseSharedSwift.xcframework.zip",
-      checksum: "3e00835146782cfcd710862d5e169702678a292a3e94dac673f10506a8e78ec0"
+      checksum: "44fc7cce92768f9ea57015a559d0b29c26089770e4e33388d019a57f6eb279f4"
     ),
     .binaryTarget(
       name: "_FirebaseStorage",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_FirebaseStorage.xcframework.zip",
-      checksum: "1dd8e70e4e8c50144b68277ac62541af9b629a4717498a4aa256fbcd72722674"
+      checksum: "28416f73c604792c06b1e969cc4187877ab0d1a01789ec6307560b6b40b54128"
     ),
     .binaryTarget(
       name: "_FirebaseVertexAI",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_FirebaseVertexAI.xcframework.zip",
-      checksum: "7324270b9631c599541803a6baac4588b81afedd4007637aa5760a3d31e9f9f7"
+      checksum: "b25d702aee6a98af6bafeae7d8da5ce69fdde6981b4fae90afebca0cf1895274"
     ),
     .binaryTarget(
       name: "_GTMAppAuth",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_GTMAppAuth.xcframework.zip",
-      checksum: "dca7337f9cde059de4a538bc22ceffa83b84aa5cbac312a3c00418ad1c4b1e8c"
+      checksum: "9f314be09242154b91685e60380972e10b92f07b4a02a17a9198cfa842738b4c"
     ),
     .binaryTarget(
       name: "_GTMSessionFetcher",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_GTMSessionFetcher.xcframework.zip",
-      checksum: "5dddee19adc7d902f26f73ba31d634a2741e6010736eeafb1a790cbd6fee4947"
+      checksum: "3ee03e15ac1711f705b1879aaa333ed832f97e68981d6609671931874b7ac8cb"
     ),
     .binaryTarget(
       name: "_GoogleAppMeasurement",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_GoogleAppMeasurement.xcframework.zip",
-      checksum: "4816a03558a1ee537026df1b98396910002d97e23e18b290fb1093feb9864369"
+      checksum: "218691ad7ed1f7e6884836e87badf58bd8c3f56e7c8c9910e2c5d94050a7fa53"
     ),
     .binaryTarget(
       name: "_GoogleAppMeasurementIdentitySupport",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_GoogleAppMeasurementIdentitySupport.xcframework.zip",
-      checksum: "59bff58179426ffa63d950287b02a22d55db2fc9498fe6f04b90821e87b4ed65"
+      checksum: "028dfe79ca1539540281c1adddcfdaafd080d1b3add529697a6a77694b2d8568"
     ),
     .binaryTarget(
       name: "_GoogleAppMeasurementOnDeviceConversion",
@@ -533,72 +533,72 @@ let package = Package(
     .binaryTarget(
       name: "_GoogleDataTransport",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_GoogleDataTransport.xcframework.zip",
-      checksum: "e8ac911772bdbf0a023ecd69a648984904dc5164b6eb161b41fd1bd2df5c57aa"
+      checksum: "b3332dd5d27d39cebf12bad45d629abc2d4e6b92111f600e427a695140479060"
     ),
     .binaryTarget(
       name: "_GoogleMobileAds",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_GoogleMobileAds.xcframework.zip",
-      checksum: "b13c7363623d88b517e01297173350ba0da33919a43d42b0bcdca752d6727065"
+      checksum: "04ebd0ae7fb74954761cf77dcece51f0581b78697913d56412ef5fc56fd48fa9"
     ),
     .binaryTarget(
       name: "_GoogleSignIn",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_GoogleSignIn.xcframework.zip",
-      checksum: "cbb14964e145f19052e9911c25e2ffb8df8a424e51167b0f5a2e43a258a8ddb8"
+      checksum: "4c6ba60133f385383088fc55414991b04a3b1764832fe834f226cbcaef920d7b"
     ),
     .binaryTarget(
       name: "_GoogleUtilities",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_GoogleUtilities.xcframework.zip",
-      checksum: "4d31a071eb493d45e78741d8d1e80fc715751ba2ad5e6d49e9a94e6645d2acc3"
+      checksum: "4f157b08c54f43fb099cadb43d1db7b9f1568aac4cdca6edea62ea0db7b6ee9d"
     ),
     .binaryTarget(
       name: "_Promises",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_Promises.xcframework.zip",
-      checksum: "80b87d32c046e3c41c40ce118a57da7f357ef66d772964e15522734672636457"
+      checksum: "b081f24f8e5bfb0972098176b00b24df37c73d672a1f7156aea736a5b202f4be"
     ),
     .binaryTarget(
       name: "_RecaptchaInterop",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_RecaptchaInterop.xcframework.zip",
-      checksum: "51d13638b775253dc3a53c7d61f389c6423084c508d5107d969c2d2cb29edb65"
+      checksum: "34e93963ab57e57d30765d02258d96f89a2c6c97e4fc5cd6f237e2fcd4488794"
     ),
     .binaryTarget(
       name: "_SwiftProtobuf",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_SwiftProtobuf.xcframework.zip",
-      checksum: "9c2ae92bb6f98287f345f1c9a27eee307950bdda1de61eb1a6e15e6e9012ff80"
+      checksum: "67b6b253651aecab0b707ed7ea55c119bd0997b0e24c7aa9d64a8ed092d92521"
     ),
     .binaryTarget(
       name: "_UserMessagingPlatform",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_UserMessagingPlatform.xcframework.zip",
-      checksum: "b6020e90171f575fc5df28f3bb5e239e3582b965183b3151e475f2e657efdc24"
+      checksum: "5b63029eb33a6cb25febf18c4340c511340dfff7d42c7672bf0c28b43fb7d841"
     ),
     .binaryTarget(
       name: "_absl",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_absl.xcframework.zip",
-      checksum: "9f0fd04c0dc05acda250e68723814f143cefa4af3caade3ef1272cbbf03619bc"
+      checksum: "27d8d9c7b2270a3dff6cbb028de0640824ef5f99b22046933c8ef40cce468763"
     ),
     .binaryTarget(
       name: "_grpc",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_grpc.xcframework.zip",
-      checksum: "deeece6b2244f78f6702aad674cf51ae969ae465260b3ef91454a131a501ff96"
+      checksum: "e8aaf836da9d95d9a5f2db38f6fcdb46cd4f43f3e3ad2b0b374c579e364875d4"
     ),
     .binaryTarget(
       name: "_grpcpp",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_grpcpp.xcframework.zip",
-      checksum: "9e11a57fab7d50148854a65c51cd538978bdea8c12f897481ce99ede37ec83e0"
+      checksum: "0555565c594cafba2fc05de5ce057b0a9ded9c5d77b143ca03ad3f124a455ab8"
     ),
     .binaryTarget(
       name: "_leveldb",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_leveldb.xcframework.zip",
-      checksum: "e4697623a24fb0aaf50e8b13cd26a73aa8a651bb2c1d0c52878663cf442fe4b2"
+      checksum: "34e5941ce166ffd4180483040caef21a1ae9d4c70fb9eec609144b6f2580ef5b"
     ),
     .binaryTarget(
       name: "_nanopb",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_nanopb.xcframework.zip",
-      checksum: "f8a3dce8b07fbe9e6a7027c47b72ff08782e6df1b55dcbca349ae6314ac9eefe"
+      checksum: "cb01c00bfa861cc05afaca4e568697d18bba195245c48d711c37f53b1f5172bb"
     ),
     .binaryTarget(
       name: "_openssl_grpc",
       url: "https://github.com/cricut/firebase-ios-sdk-xcframeworks/releases/download/11.6.0/_openssl_grpc.xcframework.zip",
-      checksum: "1b0542016fcf7e515df321795d80dd3e4c5a4cb07790ae7feaef29f58a4569a1"
+      checksum: "a1003f932e2e577047609d5bc6ae1b1dcba4daed8699aa0f319f103a53888557"
     )
   ]
 )
