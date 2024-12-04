@@ -9,11 +9,10 @@ jobs:
   build:
     runs-on: [macOS, ios-build]
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
+      - uses: actions/checkout@v5
       - name: Authorize
         run: echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
-
       - name: Release
         run: cd .scripts && sh ./package.sh
+      - name: Cleanup
+        run: find . -delete
