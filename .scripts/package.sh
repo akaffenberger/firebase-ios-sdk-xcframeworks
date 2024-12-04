@@ -276,10 +276,11 @@ set -o pipefail
 # Repos
 firebase_repo="https://github.com/firebase/firebase-ios-sdk"
 xcframeworks_repo="https://github.com/cricut/firebase-ios-sdk-xcframeworks"
+xcframeworks_old_repo="https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks"
 
 # Release versions
 latest=$(latest_release_number $firebase_repo)
-current=$(latest_release_number $xcframeworks_repo)
+current=$(latest_release_number $xcframeworks_old_repo)
 
 # Args
 debug=$(echo $@ || "" | grep debug)
