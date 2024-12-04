@@ -264,7 +264,7 @@ commit_changes() {
     branch=$1
     git checkout -b $branch
     git add .
-    git commit -m"Updated Package.swift and sources for latest firebase sdks"
+    git commit -m "Updated Package.swift and sources for latest firebase sdks"
     git push -u origin $branch
     gh pr create --fill
 }
@@ -275,11 +275,12 @@ set -o pipefail
 
 # Repos
 firebase_repo="https://github.com/firebase/firebase-ios-sdk"
-xcframeworks_repo="https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks"
+xcframeworks_repo="https://github.com/cricut/firebase-ios-sdk-xcframeworks"
+xcframeworks_old_repo="https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks"
 
 # Release versions
 latest=$(latest_release_number $firebase_repo)
-current=$(latest_release_number $xcframeworks_repo)
+current=$(latest_release_number $xcframeworks_old_repo)
 
 # Args
 debug=$(echo $@ || "" | grep debug)
