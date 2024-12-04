@@ -9,7 +9,7 @@ jobs:
   build:
     runs-on: [macOS, ios-build]
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v4
       - name: Authorize
         run: echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
       - name: Release
