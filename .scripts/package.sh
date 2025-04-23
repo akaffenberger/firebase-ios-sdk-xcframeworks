@@ -334,8 +334,19 @@ if [[ $latest != $current || $debug ]]; then
     # Deploy to repository
     echo "Merging changes to Github..."
     commit_changes "release/$latest"
-    echo "Creating release draft"
-    echo "Release $latest" | gh release create --target "release/$latest" --draft $latest $scratch/dist/*.xcframework.zip
+
+    # Tag this commit to enable automatic release creation
+    if git rev-parse "$latest" >/dev/null 2>&1; then
+        echo "Tag $latest already exists. Skipping."
+    else
+        # Tag the current commit with the version
+        git tag "$latest"
+        # Push the tag to the remote repository
+        git push origin "$latest"
+    fi
+
+    echo "Creating release"
+    echo "Release $latest" | gh release create --target "release/$latest" --title "Release $latest" $latest $scratch/dist/*.xcframework.zip
 else
     echo "$current is up to date."
 fi
