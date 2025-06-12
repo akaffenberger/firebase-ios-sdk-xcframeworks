@@ -264,7 +264,7 @@ commit_changes() {
     branch=$1
     git checkout -b $branch
     git add .
-    git commit -m"Updated Package.swift and sources for latest firebase sdks"
+    git commit -m"Updated Package.swift and sources for latest firebase sdks - ${branch#release/}"
     git push -u origin $branch
     gh pr create --fill
 }
